@@ -1,34 +1,38 @@
 const mongoose = require("mongoose");
 
 const guestSchema = new mongoose.Schema({
-  firstName: String,
-  lastName: String,
-  email: String,
-  phone: String,
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  phone: { type: String, required: true },
   groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Group" },
-  isInvited: Boolean,
+  isInvited: { type: Boolean, default: false },
 });
 
 const Guest = mongoose.model("Guest", guestSchema);
 
 const groupSchema = new mongoose.Schema({
-  groupName: String,
+  groupName: { type: String, required: true },
   members: [{ type: mongoose.Schema.Types.ObjectId, ref: "Guest" }],
-  rsvpStatus: String, // e.g. "pending"
+  rsvpStatus: { type: String, default: "Pending" }, // e.g. "pending"
 });
 
 const Group = mongoose.model("Group", groupSchema);
 
 const rsvpSchema = new mongoose.Schema({
-  groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Group" },
+  groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Group", required: true },
   guests: [
     {
-      guestId: { type: mongoose.Schema.Types.ObjectId, ref: "Guest" },
-      attending: Boolean,
-      mealPreference: String,
-      specialRequests: String
+      guestId: { type: mongoose.Schema.Types.ObjectId, ref: "Guest", required: true },
+      attending: { type: Boolean, default: false },
+      mealPreference: { type: String, default: "" },
+      specialRequests: { type: String, default: "" }
     },
   ],
+  overallStatus: { type: String, default: "Pending" },
 });
 
 const RSVP = mongoose.model("RSVP", rsvpSchema);
+
+
+module.exports = { Guest, Group, RSVP };
