@@ -58,21 +58,3 @@ module.exports = {
   rsvpFormHandler,
   getGroupRSVPStatus,
 }
-
-
-// const calculateGroupRSVPStatus = (rsvp) => {
-//   const totalGuests = rsvp.guests.length;
-//   const attendingGuests = rsvp.guests.filter(guest => guest.attending).length;
-
-//   if (attendingGuests === totalGuests) {
-//     return 'Accepted';
-//   } else if (attendingGuests === 0) {
-//     return 'Declined';
-//   } else {
-//     return 'Partially Accepted';
-//   }
-// };
-
-// // Usage in the Dashboard
-// const groupStatus = calculateGroupRSVPStatus(rsvp);
-// console.log(`Group Status: ${groupStatus}`);
