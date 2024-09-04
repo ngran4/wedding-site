@@ -2,19 +2,21 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const RSVP = () => {
-  const [formData, setFormData] = useState({ firstName: '', lastName: ''});
+  const [guestName, setGuestName] = useState(''); // single state for full name entry
   const [group, setGroup] = useState(null);
 
   // handle input changes and update form state
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setGuestName({ ...guestName, [e.target.name]: e.target.value });
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const [firstName, lastName] = guestName.split(' ');
+
     try {
-      const res = await axios.get(`/api/guests/group?firstName=${formData.firstName}&lastName=${formData.lastName}`); //***group id instead of first and last name */
+      const res = await axios.get(`/api/guests/group?firstName=${guestName.firstName}&lastName=${guestName.lastName}`); //***group id instead of first and last name */
       setGroup(res.data); // update group state with fetched data
     } catch (error) {
       alert('error fetching group details');
@@ -26,9 +28,9 @@ const RSVP = () => {
       <h1>RSVP Here</h1>
       {!group ? ( 
         // if group data not available, show initial form, otherwise show group RSVP form
-      <form>
+      <form onSubmit={handleSubmit}>
         {/* input for putting first and last name same input box? */}
-        <input type="text" name="name" placeholder="Name" required /> 
+        <input type="text" name="name" placeholder="Name" onChange={handleChange} required /> 
         <button type='submit'>Find RSVP</button>
       </form>
 
@@ -44,14 +46,14 @@ const RSVP = () => {
 const GroupRSVPForm = ({ group }) => {
   const [rsvpData, setRsvpData] = useState(group.members.map(member => ({
     ...member,
-    attending: '',
+    attending: null,
     mealChoice: '',
     specialRequests: ''
   })));
 
   const handleChange = (index, e) => {
     const newRsvpData = [...rsvpData]; // create copy of rsvp data state
-    newRsvpData[index][e.target.name] = e.target.value;
+    newRsvpData[index][e.target.name] = e.target.value; // update specific field for member
     setRsvpData(newRsvpData); 
   }
 
