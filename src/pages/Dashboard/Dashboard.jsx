@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Dashboard = () => {
+  const [guests, setGuests] = useState();
+ 
   return (
     <div>Dashboard</div>
   )
