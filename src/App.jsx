@@ -9,12 +9,20 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import axios from "axios"
 
 function App() {
+
+  const responseMessage = (response) => {
+    console.log(response);
+  };
+  const errorMessage = (error) => {
+    console.log(error);
+  };
+
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rsvp" element={<RSVP />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>

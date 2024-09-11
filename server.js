@@ -18,7 +18,7 @@ app.use(passport.session());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const userRoutes = require('./routes/user');
+const userRoutes = require('./routes/users');
 app.use('/', userRoutes);
 
 
