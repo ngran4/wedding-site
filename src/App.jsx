@@ -7,6 +7,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Navbar from './components/Navbar/Navbar';
+import NavbarHook from './components/Navbar/NavbarHook/NavbarHook';
 import Details from './pages/Details/Details';
 import WeddingParty from './pages/WeddingParty/WeddingParty';
 import Registry from './pages/Registry/Registry';
@@ -24,7 +25,8 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarHook />
       <div className="main__content">
       <Routes>
         <Route path="/" element={<Home />} />
