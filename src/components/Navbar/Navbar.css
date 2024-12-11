@@ -55,9 +55,8 @@
   right: 0;
  }
 
-
  
- /* MEDIA QUIERIES */
+ /* MEDIA QUIERIES
  @media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
@@ -86,4 +85,4 @@
     flex-direction: row;
     column-gap: 2.5rem;
   }
- }
+ } */
