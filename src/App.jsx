@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import RSVP from './pages/RSVP/RSVP';
@@ -24,6 +25,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <div className="main__content">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rsvp" element={<RSVP />} />
@@ -34,6 +36,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
+      
+      </div>
     </Router>
   );
 }

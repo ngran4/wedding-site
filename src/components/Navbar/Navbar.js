@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Navbar.css'
 import { NavLink } from "react-router-dom";
 import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 
@@ -33,6 +34,13 @@ function Navbar() {
               </NavLink>
             </li>
           </ul>
+          <div className="nav__close" id="nav-close">
+            <IoCloseOutline />
+          </div>
+        </div>
+
+        <div className="nav__toggle" id="nav-toggle">
+          <IoMenuOutline />
         </div>
       </nav>
     </header>
