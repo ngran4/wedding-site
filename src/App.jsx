@@ -5,6 +5,7 @@ import RSVP from './pages/RSVP/RSVP';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Navbar from './components/Navbar/Navbar';
 
 import axios from "axios"
 
@@ -19,12 +20,13 @@ function App() {
 
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rsvp" element={<RSVP />} />
-        <Route path="/login" element={<Login/>} />
+        {/* <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<Dashboard />} /> */}
       </Routes>
     </Router>
   );

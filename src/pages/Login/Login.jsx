@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import GoogleLogin from '../components/GoogleLogin'; 
+// import GoogleLogin from '../components/GoogleLogin'; 
 
 function Login() {
   const [user, setUser] = useState();
@@ -9,7 +9,7 @@ function Login() {
 
       <div className="Login">
         <h1>Login</h1>
-        <GoogleLogin setUser={setUser} />
+        {/* <GoogleLogin setUser={setUser} /> */}
         {user && (
           <div>
             <p>{user.name}</p>
@@ -19,3 +19,5 @@ function Login() {
       </div>
   );
 }
+
+export default Login;
