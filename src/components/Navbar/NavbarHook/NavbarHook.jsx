@@ -9,16 +9,22 @@ const NavbarHook = () => {
   const isMobile = useMediaQuery({ maxWidth: "1150px" });
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+    console.log('toggle menu')
   };
   const closeMobileMenu = () => {
     if (isMobile) {
       setMobileMenuOpen(false);
-    }
+      console.log('close mobile menu, is mobile')
+    } 
   };
 
   const renderNavLinks = () => {
     const listClassName = isMobile ? "nav__list" : "nav__list__web";
     const linkClassName = "nav__link";
+
+    // console.log(listClassName, 'listClassName') // recognizes when web vs mobile
+
+    // console.log('render nav links') // is called upon page load
 
     return (
       <ul className={listClassName}>
@@ -38,7 +44,7 @@ const NavbarHook = () => {
         </li>
         <li>
           <NavLink
-            to="/weddingparty"
+            to="/wedding-party"
             className={linkClassName}
             onClick={closeMobileMenu}
           >
@@ -69,9 +75,10 @@ const NavbarHook = () => {
             <IoMenuOutline />
           </div>
         )}
+
         {isMobile ? (
           <div
-            className={`nav__menu  ${mobileMenuOpen ? "show-menu" : ""}`}
+            className={`nav__menu ${mobileMenuOpen ? "show-menu" : ""}`}
             id="nav-menu"
           >
             {renderNavLinks()}
