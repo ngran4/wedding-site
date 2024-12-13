@@ -1,4 +1,4 @@
-.header {
+/* .header {
   position: fixed;
   width: 100%;
   top: 0;
@@ -45,17 +45,17 @@
   color: var(--first-color);
  }
  
- .nav__close {
+ /* .nav__close {
   position: absolute;
   top: 1rem;
   right: 1.5rem;
- }
+ } */
  
- .show-menu {
+ /* .show-menu {
   right: 0;
  }
 
- 
+  */ 
  /* MEDIA QUIERIES
  @media screen and (max-width: 1150px) {
   .nav__menu {

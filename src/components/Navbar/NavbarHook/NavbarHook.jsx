@@ -9,12 +9,12 @@ const NavbarHook = () => {
   const isMobile = useMediaQuery({ maxWidth: "1150px" });
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-    console.log('toggle menu')
+    // console.log('toggle menu')
   };
   const closeMobileMenu = () => {
     if (isMobile) {
       setMobileMenuOpen(false);
-      console.log('close mobile menu, is mobile')
+      // console.log('close mobile menu, is mobile')
     } 
   };
 
