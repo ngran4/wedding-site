@@ -1,0 +1,15 @@
+.hero__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background: rgb(135, 97, 97);
+}
+
+.hero__textbox {
+  text-align: center;
+}
+
+#hero-names {
+  font-size: 2.5rem;
+}

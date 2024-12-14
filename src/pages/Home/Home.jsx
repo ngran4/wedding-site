@@ -1,12 +1,14 @@
 import React from 'react';
-
-import Navbar from "../../components/Navbar/Navbar";
+import Hero from './Hero/Hero';
+import DetailsBlock from './DetailsBlock/DetailsBlock';
+import RsvpBlock from './RsvpBlock/RsvpBlock';
 
 const Home = () => {
   return (
     <div>
-    <h1>Nicole and Ian</h1>
-    <p>Join us in celebrating our special day!</p>
+    <Hero />
+    <DetailsBlock />
+    <RsvpBlock />
   </div>
   )
 }

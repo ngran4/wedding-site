@@ -1,0 +1,21 @@
+.DetailsBlock__container {
+  display: grid;
+  background-color: pink;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.DetailsBlock__block {
+  display: flex;
+  background-color: lightblue;
+}
+
+.DetailsBlock__details {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(189, 224, 189);
+}
+
