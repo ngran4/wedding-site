@@ -5,7 +5,7 @@ import RsvpBlock from './RsvpBlock/RsvpBlock';
 
 const Home = () => {
   return (
-    <div>
+    <div className='home__container'>
     <Hero />
     <DetailsBlock />
     <RsvpBlock />

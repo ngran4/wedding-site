@@ -1,0 +1,17 @@
+.RsvoBlock__container {
+  display: grid;
+  background-color: pink;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.RsvpBlock__block1 {
+  background-color: rgb(192, 242, 225);
+}
+
+.RsvpBlock__block2 {
+  background-color: rgb(220, 196, 242);
+}

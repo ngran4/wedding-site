@@ -1,4 +1,5 @@
 import React from 'react'
+import './RsvpBlock.css'
 
 const RsvpBlock = () => {
   return (
