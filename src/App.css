@@ -2,5 +2,37 @@
   text-align: center;
 }
 .main__content {
+  display: grid;
+  grid-template-rows: auto 1fr 1fr auto;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 40px;
+  /* border: 2px solid black; */
+  height: 100vh;
+  box-sizing: border-box;
   padding-top: var(--header-height);
 }
+
+/* .main__content > div {
+  border: 1px solid gray;
+  padding: 10px; 
+} */
+
+.header, .footer {
+  grid-column: span 1;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+
+/* @media (max-width: 768px) {
+  .main__content {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr;
+    border: none;
+  }
+
+  .header, .footer {
+    grid-column: span 1;
+  }
+} */

@@ -1,3 +1,121 @@
-/* .home__container {
+.hero__container {
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background: rgb(135, 97, 97);
+  grid-column: span 1;
+  padding: 5% 10%;
+}
+
+.hero__textbox {
+  background-color: rgb(177, 236, 241);
+  text-align: center;
+  padding: 10px;
+}
+
+#hero-intro {
+  font-size: 1.3rem;
+  font-weight: 300;;
+}
+
+#hero-names {
+  font-size: 5.5rem;
+  font-family: var(--second-font);
+  font-style: italic;
+}
+
+#ampersand {
+  padding-right: 3rem;
+}
+
+.inline-container {
+  display: inline-flex;
+}
+
+.hero-date {
+  font-family: var(--second-font);
+  font-size: 2.5rem;
+}
+
+
+.DetailsBlock__container {
   display: grid;
-} */
+  grid-template-columns: 1fr 1fr;
+  height: 40vh;
+  background-color: pink;
+  grid-column: span 1;
+}
+
+.DetailsBlock__title,
+.DetailsBlock__details {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.DetailsBlock__title {
+  background-color: lightblue;
+}
+
+.DetailsBlock__details {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(189, 224, 189);
+}
+
+.RsvpBlock__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 40vh;
+  background-color: pink;
+  grid-column: span 1;
+}
+
+.RsvpBlock__title {
+  background-color: rgb(192, 242, 225);
+}
+
+.RsvpBlock__link {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(220, 196, 242);
+} 
+
+.about__container {
+  height: 50vh;
+  background-color: rgb(237, 159, 225);
+  grid-column: span 1;
+}
+
+.footer__container {
+  background-color: white;
+  grid-column: span 1;
+}
+
+
+/* ----- MEDIA QUERIES ----- */
+@media (max-width: 768px) {
+  .hero__container,
+  .DetailsBlock__container,
+  .RsvpBlock__container,
+  .about__container,
+  .footer__container {
+    grid-column: span 1;
+  }
+
+  .DetailsBlock__container,
+  .RsvpBlock__container {
+    grid-template-columns: 1fr;
+  }
+
+  #hero-names {
+    font-size: 3rem;
+    font-family: var(--second-font);
+    font-style: italic;
+  }
+  
+  #ampersand {
+    padding-right: 1rem;
+  }
+}

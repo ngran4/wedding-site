@@ -3,9 +3,9 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import RSVP from './pages/RSVP/RSVP';
-import Login from './pages/Login/Login';
-import Register from './pages/Register/Register';
-import Dashboard from './pages/Dashboard/Dashboard';
+// import Login from './pages/Login/Login';
+// import Register from './pages/Register/Register';
+// import Dashboard from './pages/Dashboard/Dashboard';
 import NavbarHook from './components/Navbar/NavbarHook/NavbarHook';
 // import Navbar from './components/Navbar/Navbar';
 import Details from './pages/Details/Details';
@@ -39,6 +39,7 @@ function App() {
       </Routes>
       
       </div>
+      
     </Router>
   );
 }
