@@ -42,12 +42,10 @@
 }
 
 
-
 .DetailsBlock__container, .RsvpBlock__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 40vh;
-  background-color: pink;
+  height: 55vh;
   grid-column: span 1;
 }
 
@@ -61,12 +59,12 @@
 }
 
 .DetailsBlock__title {
-  background-color: lightblue;
+  background-color: rgb(249, 248, 245);
 }
 
 .DetailsBlock__details {
   display: flex;
-  background-color: rgb(189, 224, 189);
+  background-color: white;
 }
 
 #join-us {
@@ -119,12 +117,11 @@
 }
 
 .RsvpBlock__title {
-  background-color: rgb(192, 242, 225);
+  background-color: var(--primary-orange);
 }
 
 .RsvpBlock__link {
-  display: flex;
-  background-color: rgb(220, 196, 242);
+  background-color: white;
 } 
 
 #commit {
@@ -138,11 +135,24 @@
   line-height: 100%;
 }
 
-
+#RsvpBlock__text {
+  font-size: 1.5rem;
+  padding: 5%;
+}
 .about__container {
+  display: flex;
   height: 50vh;
-  background-color: rgb(237, 159, 225);
+  background-color: rgb(249, 248, 245);
+  justify-content: center;
+  align-items: center;
   grid-column: span 1;
+}
+
+.about__title {
+  font-size: 4rem;
+  font-family: var(--second-font);
+  font-style: italic;
+  text-align: center;
 }
 
 .footer__container {

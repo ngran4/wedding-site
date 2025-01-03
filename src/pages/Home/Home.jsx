@@ -31,7 +31,7 @@ const Home = () => {
           </div>
         </div>
         <div className="DetailsBlock__details">
-          <div id="DetailsBlock--date">SUNDAY, 9.7.25</div>
+          <div id="DetailsBlock__date">SUNDAY, 9.7.25</div>
           <div id="DetailsBlock__address">
             Via delle Ville, 2400, 55100 Lucca LU, Italy
           </div>
@@ -74,9 +74,9 @@ const Home = () => {
 
       <div className="RsvpBlock__container">
         <div className="RsvpBlock__link">
-          <div className="RsvpBlock__text">Please confirm your attendance</div>
-          <div className="RsvpBlock__link">
-            <a href="/rsvp">RSVP</a>
+          <p id="RsvpBlock__text">Please confirm your attendance</p>
+          <div id="rsvp-btn">
+            <a href="/rsvp" className="btn" style={{color: 'white'}}>RSVP NOW</a>
           </div>
         </div>
         <div className="RsvpBlock__title">
@@ -90,7 +90,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="about__container">our story</div>
+      <div className="about__container">
+        <div className="about__title">OUR <br /> STORY</div>
+      </div>
       <div className="footer__container">
         <Footer />
       </div>
