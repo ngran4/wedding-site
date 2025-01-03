@@ -27,7 +27,7 @@ const Home = () => {
           <div id="where-when">WHERE&WHEN</div>
         </div>
         <div className="DetailsBlock__details">
-          <div className="DetailsBlock__details--date">Sunday, 9.7.25</div>
+          <div className="DetailsBlock__details--date">SUNDAY, 9.7.25</div>
           <div className="DetailsBlock__details--address">
             Via delle Ville, 2400, 55100 Lucca LU, Italy
           </div>
@@ -40,14 +40,16 @@ const Home = () => {
       </div>
 
       <div className="RsvpBlock__container">
-        <div className="RsvpBlock__title">PLS RSVP</div>
-        <div className="RsvpBlock__link">
+      <div className="RsvpBlock__link">
           <div className="RsvpBlock__text">Please confirm your attendance</div>
           <div className="RsvpBlock__link">
             <a href="/rsvp">RSVP</a>
           </div>
         </div>
+        <div className="RsvpBlock__title">PLS RSVP</div>
+
       </div>
+
       <div className="about__container">our story</div>
       <div className="footer__container">
         <Footer />

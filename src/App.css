@@ -5,7 +5,6 @@
   display: grid;
   grid-template-rows: auto 1fr 1fr auto;
   grid-template-columns: 1fr;
-  gap: 10px;
   padding: 40px;
   /* border: 2px solid black; */
   height: 100vh;

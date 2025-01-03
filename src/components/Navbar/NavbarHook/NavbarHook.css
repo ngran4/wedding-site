@@ -3,7 +3,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  background-color: transparent;
+  background-color: white;
   z-index: var(--z-fixed);
 }
 
@@ -39,7 +39,7 @@
 
 .nav__link {
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--body-font);
   transition: color 0.4s;
 }
 
