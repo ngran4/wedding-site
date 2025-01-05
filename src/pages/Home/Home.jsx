@@ -94,7 +94,7 @@ const Home = () => {
       </div>
 
       <div className="about__container">
-        <div className="about__title">OUR <br /> STORY</div>
+        <div id="about__title">OUR <br /> STORY</div>
       </div>
       <div className="footer__container">
         <Footer />

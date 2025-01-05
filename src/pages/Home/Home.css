@@ -147,6 +147,7 @@
 #RsvpBlock__text {
   font-size: 1.5rem;
   padding: 5%;
+  text-align: center;
 }
 .about__container {
   display: flex;
@@ -157,8 +158,8 @@
   grid-column: span 1;
 }
 
-.about__title {
-  font-size: 4rem;
+#about__title {
+  font-size: 7rem;
   font-family: var(--second-font);
   font-style: italic;
   text-align: center;
@@ -210,7 +211,7 @@ width: 1px;
     order: 2;
   }
 
-  #where-when {
+  #where-when, #pls-rsvp, #about__title {
     font-size: 4rem;
   }
 
