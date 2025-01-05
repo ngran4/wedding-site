@@ -193,13 +193,21 @@ width: 1px;
   .DetailsBlock__container,
   .RsvpBlock__container {
     grid-template-columns: 1fr;
-    min-height: 95vh;
+    min-height: 100vh;
   }
 
 
   .DetailsBlock__title,
   .DetailsBlock__details, .RsvpBlock__title, .RsvpBlock__link {
     padding: 3rem;
+  }
+
+  .RsvpBlock__title {
+    order: 1;
+  }
+
+  .RsvpBlock__link {
+    order: 2;
   }
 
   #where-when {
