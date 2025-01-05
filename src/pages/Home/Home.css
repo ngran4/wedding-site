@@ -2,7 +2,7 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  background-image: url("../../../public/assets/orange-bg.png");
+  background-image: url("../../../public/assets/red-bg.png");
   /* background-size: cover; --- do this for mobile! */
   grid-column: span 1;
   padding: 5% 10%;
@@ -12,16 +12,16 @@
   background-color: white;
   text-align: center;
   padding: 5%;
+  margin: 0 10%;
 }
 
 #hero-intro {
-  font-size: 1.3rem;
-  font-weight: 300;
+  font-size: 1.4rem;
   padding: 4% 0;
 }
 
 #hero-names {
-  font-size: 5.5rem;
+  font-size: 8.5rem;
   font-family: var(--second-font);
   font-style: italic;
   line-height: 105%;
@@ -29,83 +29,95 @@
 
 #ampersand {
   padding-right: 3rem;
+  color: var(--primary-red);
+  font-size: 9rem;
 }
 
 .inline-container {
   display: inline-flex;
 }
 
-.hero-date {
+#hero-date {
   font-family: var(--second-font);
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   padding: 4% 0;
+  color: var(--primary-red);
 }
 
 
 .DetailsBlock__container, .RsvpBlock__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 55vh;
+  height: 75vh;
   grid-column: span 1;
 }
 
 .DetailsBlock__title,
 .DetailsBlock__details {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
 }
 
 .DetailsBlock__title {
-  background-color: rgb(249, 248, 245);
+  background-color: var(--primary-neutral);
 }
+
 
 .DetailsBlock__details {
   display: flex;
   background-color: white;
-}
 
-#join-us {
-  font-size:1rem;
 }
 
 #where-when {
   font-family: var(--second-font);
-  font-size: 3.5rem;
+  font-size: 7rem;
   font-style: italic;
   line-height: 100%;
 }
 
 #DetailsBlock__date {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 350;
 }
 
-.DetailsBlock__events, .DetailsBlock__event-time {
+#DetailsBlock__address {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* .DetailsBlock__events, .DetailsBlock__event-time {
   text-align: left;
-} 
+}  */
+
+.DetailsBlock__events {
+  padding: 35px 0;
+}
 
 .DetailsBlock__event-time {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  color: var(--primary-red);
+  font-family: var(--second-font);
+  font-size: 3rem;
+  font-weight: 500;
+  display: inline;
 }
 
 /* #details-link {
   display: inline-flex;
   align-items: center;
   color: black;
-}
+}*/
 
-#details-arrow {
+/* #details-arrow {
   display: inline-flex;
   align-items: center;
   vertical-align: bottom;
   line-height: 1;
   color: black;
-} */
+}  */
 
 
 .RsvpBlock__title, .RsvpBlock__link {
@@ -117,20 +129,17 @@
 }
 
 .RsvpBlock__title {
-  background-color: var(--primary-orange);
+  background-color: var(--primary-red);
 }
 
 .RsvpBlock__link {
   background-color: white;
 } 
 
-#commit {
-  font-size: 1rem;
-}
 
 #pls-rsvp {
   font-family: var(--second-font);
-  font-size: 3.5rem;
+  font-size: 7rem;
   font-style: italic;
   line-height: 100%;
 }
@@ -142,7 +151,7 @@
 .about__container {
   display: flex;
   height: 50vh;
-  background-color: rgb(249, 248, 245);
+  background-color: var(--primary-neutral);
   justify-content: center;
   align-items: center;
   grid-column: span 1;
@@ -162,9 +171,9 @@
 
 .vl {
 width: 1px;
- height: 10%;
+ height: 60px;
  background-color: black;
- margin: 2%; 
+ margin: 4%; 
  }
 
 /* ----- MEDIA QUERIES ----- */
@@ -177,18 +186,47 @@ width: 1px;
     grid-column: span 1;
   }
 
+  .hero__textbox{
+    margin: 5% 0;
+  }
+
   .DetailsBlock__container,
   .RsvpBlock__container {
     grid-template-columns: 1fr;
+    min-height: 95vh;
+  }
+
+
+  .DetailsBlock__title,
+  .DetailsBlock__details, .RsvpBlock__title, .RsvpBlock__link {
+    padding: 3rem;
+  }
+
+  #where-when {
+    font-size: 4rem;
+  }
+
+  .vl {
+    height: 45px; 
+    margin: 5% auto; 
   }
 
   #hero-names {
-    font-size: 3rem;
+    font-size: 3.8rem;
     font-family: var(--second-font);
     font-style: italic;
+  }
+
+  #hero-date {
+    font-size: 3.5rem;
   }
   
   #ampersand {
     padding-right: 1rem;
+    font-size: 4.1rem;
+  }
+
+  .hero-date {
+    font-size: 2.8rem;
   }
 }

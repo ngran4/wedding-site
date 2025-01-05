@@ -5,7 +5,7 @@
   display: grid;
   grid-template-rows: auto 1fr 1fr auto;
   grid-template-columns: 1fr;
-  padding: 40px;
+  padding: 3rem;
   /* border: 2px solid black; */
   height: 100vh;
   box-sizing: border-box;
@@ -24,14 +24,15 @@
 
 /* ----- MEDIA QUERIES ----- */
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .main__content {
     grid-template-rows: repeat(4, auto);
     grid-template-columns: 1fr;
     border: none;
+    padding: 100px 0;
   }
 
   .header, .footer {
     grid-column: span 1;
   }
-} */
+}

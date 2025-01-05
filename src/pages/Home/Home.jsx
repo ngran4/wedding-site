@@ -6,6 +6,9 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 // import DetailsBlock from "./DetailsBlock/DetailsBlock";
 // import RsvpBlock from "./RsvpBlock/RsvpBlock";
 
+const primaryOrange = getComputedStyle(document.documentElement).getPropertyValue('--primary-orange');
+const primaryRed = getComputedStyle(document.documentElement).getPropertyValue('--primary-red');
+
 const Home = () => {
   return (
     <>
@@ -18,13 +21,13 @@ const Home = () => {
               <div id="ampersand">& </div>IAN
             </div>
           </div>
-          <div className="hero-date">9.7.25</div>
+          <div id="hero-date">9.7.25</div>
         </div>
       </div>
 
       <div className="DetailsBlock__container">
         <div className="DetailsBlock__title">
-          <p id="join-us">JOIN US</p>
+          <p style={{ fontSize: '1.3rem'}}>JOIN US</p>
           <div className="vl"></div>
           <div id="where-when">
             WHERE <br /> & WHEN
@@ -37,37 +40,37 @@ const Home = () => {
           </div>
 
           <div className="DetailsBlock__events">
-          <div id="DetailsBlock__event-time">
-            <div
-              style={{ color: "orange", fontSize: "2rem", display: "inline" }}
+          <div>
+            <div 
+              className="DetailsBlock__event-time"
             >
               4
             </div>
-            <span style={{ color: "orange", fontSize: "1rem" }}> pm</span>{" "}
+            <span style={{ color: primaryRed,  paddingRight: '8px' }}> pm</span>{" "}
             Ceremony
           </div>
-          <div id="DetailsBlock__event-time">
+          <div>
             <div
-              style={{ color: "orange", fontSize: "2rem", display: "inline" }}
+              className="DetailsBlock__event-time"
             >
               5
             </div>
-            <span style={{ color: "orange", fontSize: "1rem" }}> pm</span>{" "}
+            <span style={{ color: primaryRed,  paddingRight: '8px' }}> pm</span>{" "}
             Aperitivo
           </div>
-          <div id="DetailsBlock__event-time">
+          <div>
             <div
-              style={{ color: "orange", fontSize: "2rem", display: "inline" }}
+            className="DetailsBlock__event-time"
             >
               6
             </div>
-            <span style={{ color: "orange", fontSize: "1rem," }}> pm</span>{" "}
+            <span style={{ color: primaryRed, paddingRight: '8px' }}> pm</span>{" "}
             Reception
           </div>
           </div>
 
           <div id="DetailsBlock__link">
-            <a href="/details" id="details-link">See Full Details <span id="details-arrow"> <HiOutlineArrowLongRight /></span></a>
+            <a href="/details" style={{ fontSize: '1rem'}}>See Full Details <span id="details-arrow"> <HiOutlineArrowLongRight /></span></a>
           </div>
         </div>
       </div>
@@ -80,7 +83,7 @@ const Home = () => {
           </div>
         </div>
         <div className="RsvpBlock__title">
-          <p id="commit">READY TO COMMIT?</p>
+          <p style={{ fontSize: '1.3rem'}}>READY TO COMMIT?</p>
           <div className="vl"></div>
           <div id="pls-rsvp">
             PLS

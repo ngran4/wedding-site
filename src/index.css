@@ -8,10 +8,12 @@
  }
  
  :root {
-  --header-height: 3.5rem;
+  --header-height: 30px;
   --first-color: hsl(0, 0%, 2%);
   --title-color: hsl(12, 47%, 68%);
   --primary-orange: rgb(249, 193, 128);
+  --primary-neutral:rgb(249, 248, 245);
+  --primary-red: #f4705d;
   --text-color: rgb(61, 58, 58);
   --body-color: white;
   --body-font: "Jost", serif;
@@ -27,6 +29,7 @@
   background-color: var(--body-color);
   color: var(--text-color);
   font-family: var(--body-font);
+  font-weight: 200;
  }
  
  ul {
@@ -42,7 +45,7 @@
   display: inline-block;
   cursor: pointer;
   padding: .9rem 2.2rem;
-  background-color: var(--primary-orange);
+  background-color: var(--primary-red);
   /* transition: var(--transition); */
 }
 
