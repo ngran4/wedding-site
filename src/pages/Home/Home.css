@@ -2,8 +2,8 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  background-image: url("../../../public/assets/red-bg.png");
-  /* background-size: cover; --- do this for mobile! */
+  background-image: url("../../../public/assets/orange2.png");
+  background-size: cover; 
   grid-column: span 1;
   padding: 5% 10%;
 }
@@ -42,23 +42,25 @@
   font-size: 4.5rem;
   padding: 4% 0;
   color: var(--primary-red);
+  display: inline;
 }
 
 
 .DetailsBlock__container, .RsvpBlock__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 75vh;
+  height: auto;
   grid-column: span 1;
 }
 
 .DetailsBlock__title,
-.DetailsBlock__details {
+.DetailsBlock__details, .RsvpBlock__link, .RsvpBlock__title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  padding: 7rem 0;
 }
 
 .DetailsBlock__title {
@@ -77,6 +79,7 @@
   font-size: 7rem;
   font-style: italic;
   line-height: 100%;
+  text-align: center;
 }
 
 #DetailsBlock__date {
@@ -89,9 +92,6 @@
   font-size: 1.2rem;
 }
 
-/* .DetailsBlock__events, .DetailsBlock__event-time {
-  text-align: left;
-}  */
 
 .DetailsBlock__events {
   padding: 35px 0;
@@ -103,29 +103,6 @@
   font-size: 3rem;
   font-weight: 500;
   display: inline;
-}
-
-/* #details-link {
-  display: inline-flex;
-  align-items: center;
-  color: black;
-}*/
-
-/* #details-arrow {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: bottom;
-  line-height: 1;
-  color: black;
-}  */
-
-
-.RsvpBlock__title, .RsvpBlock__link {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .RsvpBlock__title {
@@ -142,6 +119,7 @@
   font-size: 7rem;
   font-style: italic;
   line-height: 100%;
+  text-align: center;
 }
 
 #RsvpBlock__text {
@@ -194,13 +172,13 @@ width: 1px;
   .DetailsBlock__container,
   .RsvpBlock__container {
     grid-template-columns: 1fr;
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
 
 
   .DetailsBlock__title,
-  .DetailsBlock__details, .RsvpBlock__title, .RsvpBlock__link {
-    padding: 3rem;
+  .DetailsBlock__details, .RsvpBlock__title {
+    padding: 4rem 1rem;
   }
 
   .RsvpBlock__title {
@@ -209,6 +187,7 @@ width: 1px;
 
   .RsvpBlock__link {
     order: 2;
+    padding: 6rem 1rem;
   }
 
   #where-when, #pls-rsvp, #about__title {

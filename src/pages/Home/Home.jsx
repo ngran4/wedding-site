@@ -18,10 +18,16 @@ const Home = () => {
           <div id="hero-names">
             NICOLE <br />
             <div className="inline-container">
-              <div id="ampersand">& </div>IAN
+              <div id="ampersand">&</div>IAN
             </div>
           </div>
-          <div id="hero-date">9.7.25</div>
+          <div id="hero-date">
+            <div style={{ verticalAlign: 'middle', display: 'inline', fontSize: '4rem' }}>9</div>
+            .
+            <div style={{ display: 'inline' }}>7</div>
+            .
+            <div style={{ verticalAlign: 'middle', display: 'inline', fontSize: '3.9rem' }}>25</div>
+            </div>
         </div>
       </div>
 
@@ -30,7 +36,7 @@ const Home = () => {
           <p style={{ fontSize: '1.3rem'}}>JOIN US</p>
           <div className="vl"></div>
           <div id="where-when">
-            WHERE <br /> & WHEN
+            WHERE<br /><div style={{ display: 'inline', color: primaryRed }}>&</div>WHEN
           </div>
         </div>
         <div className="DetailsBlock__details">
