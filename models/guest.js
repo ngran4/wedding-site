@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const guestSchema = new mongoose.Schema({
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  phone: { type: String, required: true },
+  email: { type: String, required: false, unique: true },
+  phone: { type: String, required: false },
   groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Group" },
   isInvited: { type: Boolean, default: false },
 });
@@ -30,6 +30,7 @@ const rsvpSchema = new mongoose.Schema({
     },
   ],
   overallStatus: { type: String, default: "Pending" },
+  earlyResponse: { type: String, enum: ["yes", "no"], default: "Pending" }
 });
 
 const RSVP = mongoose.model("RSVP", rsvpSchema);

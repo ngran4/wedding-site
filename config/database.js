@@ -1,11 +1,28 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/wedding2025", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
-const db = mongoose.connection;
+const db = process.env.DATABASE_URL;
 
-db.on('connected', function() {
-  console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
-});
+mongoose.set("strictQuery", true, "useNewUrlParser", true);
+
+const connectDB = async () => {
+  try {
+    await mongoose.connect(db);
+    console.log("MongoDB is Connected...");
+  } catch (err) {
+    console.error(err.message);
+    process.exit(1);
+  }
+};
+module.exports = connectDB;
+
+// mongoose.connect(process.env.DATABASE_URL, {
+//   // useNewUrlParser: true,
+//   // useUnifiedTopology: true,
+// });
+
+// const db = mongoose.connection;
+
+// db.on('connected', function() {
+//   console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
+// });
+
