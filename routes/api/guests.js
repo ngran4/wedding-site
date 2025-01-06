@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const guestsCtrl = require('../../controllers/guests');
 
-router.get('test', guestsCtrl.testGuests)
+router.get('/test', guestsCtrl.testGuests)
 
 router.post('/rsvp', guestsCtrl.rsvpFormHandler);
 router.get('/rsvp-status/:groupId', guestsCtrl.getGroupRSVPStatus)

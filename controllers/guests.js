@@ -1,8 +1,44 @@
-const { Guest, RSVP } = require("../models/guest");
+const { Guest, Group } = require("../models/guest");
 
 const testGuests = (req, res) => {
   return res.send('rsvp route testing!')
 }
+
+const searchGuest = async (req, res) => {
+  try{
+    const { fullName } = req.query;
+
+    // find guest by name (case-insensitive)
+    const guest = await Guest.findOne({ fullName: { $regex: fullName, $iptions: 'i'}}).populate('groupId');
+    
+    if (!guest) {
+      return res.status(404).json({message: 'Guest not found'});
+    }
+
+    //fetch all guests in the same group
+    const group = await Group.findById(quest.groupId).populate('members');
+
+    return res.json({ guest, group});
+
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Sevver error'});
+  }
+}
+
+const updateEarlyResponse = async (req, res) => {
+  try {
+    const { guestId } = req.params.id;
+    console.log('GUEST ID ====>',guestId);
+    const { earlyResponse } = req.body;
+    console.log('EARLY RESPONSE ====>',earlyResponse);
+    
+    // const guest = await Guest.findByIdAndUpdate
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Server error.');
+}
+};
 
 // Take RSVP object and calculate total number of guests attending, return RSVP status 
 // const calculateGroupRSVPStatus = (rsvp) => {
@@ -59,7 +95,6 @@ const testGuests = (req, res) => {
 
 
 module.exports = {
-  rsvpFormHandler,
-  getGroupRSVPStatus,
-  testGuests
+  testGuests,
+  searchGuest,
 }
