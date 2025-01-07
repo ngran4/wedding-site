@@ -1,0 +1,19 @@
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+}
+
+.upper-footer {
+  width: 93%;
+  background-color: tomato;
+  height: 50%
+}
+.lower-footer {
+  width: 100%;
+  background-color: white;
+  height: 50%;
+}

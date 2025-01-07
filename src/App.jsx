@@ -7,6 +7,7 @@ import RSVP from './pages/RSVP/RSVP';
 // import Register from './pages/Register/Register';
 // import Dashboard from './pages/Dashboard/Dashboard';
 import NavbarHook from './components/Navbar/NavbarHook/NavbarHook';
+import Footer from './components/Footer/Footer';
 // import Navbar from './components/Navbar/Navbar';
 import Details from './pages/Details/Details';
 import WeddingParty from './pages/WeddingParty/WeddingParty';
@@ -39,7 +40,7 @@ function App() {
       </Routes>
       
       </div>
-      
+        <Footer />
     </Router>
   );
 }
