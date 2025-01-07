@@ -1,3 +1,21 @@
-.rsvp-form{
-  margin-top: 3rem;
+.rsvp-form__container{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-neutral);
+  height: 100vh;
+  width: 100%;
+}
+
+
+.rsvp-form__container div {
+  margin: 10px 0;
+}
+
+.rsvp-form__container label {
+  margin-right: 10px;
+}
+
+.rsvp-form__container input[type="radio"] {
+  margin-right: 5px;
 }

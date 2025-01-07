@@ -29,39 +29,73 @@ const EarlyRsvpForm = ({ group }) => {
     });
   };
 
+  // const handleSubmitResponse = async () => {
+  //   try {
+  //     await Promise.all(
+  //       responses.map((response) => {
+  //         const url = `/api/guests/${response.guestId}/early-response`;
+  //         console.log(`Sending PATCH request to URL: ${url}`);
+  //       axios.patch(`api/guests/${response.guestId}/early-response`, {
+  //         earlyResponse: response.earlyResponse,
+  //       })
+  //   })
+  //     );
+  //     // alert("Rsvp Submitted");
+  //   } catch (error) {
+  //     console.error("Error submitting RSVP", error);
+  //     alert("Error submitting RSVP");
+  //   }
+  // }
+
   const handleSubmitResponse = async () => {
     try {
-      await Promise.all(
-        responses.map((response) => {
-          const url = `/api/guests/${response.guestId}/early-response`;
-          console.log('Submitting RSVP to URL:', url);
-        axios.patch(`api/guests/${response.guestId}/early-response`, {
-          earlyResponse: response.earlyResponse,
-        })
-    })
-      );
+      await Promise.all(responses.map(async (response) => {
+        const url = `/api/guests/${response.guestId}/early-response`; // Ensure the URL starts with a slash
+        console.log(`Sending PATCH request to: ${url}`);
+        try {
+          const res = await axios.patch(url, {
+            earlyResponse: response.earlyResponse,
+          });
+          console.log('Response:', res);
+        } catch (err) {
+          console.error(`Error for guestId ${response.guestId}:`, err);
+        }
+      }));
       alert("Rsvp Submitted");
     } catch (error) {
       console.error("Error submitting RSVP", error);
       alert("Error submitting RSVP");
     }
-  }
-
+  };
 
   return (
-    <div>
+    <div className="rsvp-form__container">
       <h2>RSVP for Group: {group.groupName}</h2>
       {responses.map((response) => (
         <div key={response.guestId}>
           <label>{response.fullName}</label>
-          <select
-            value={response.earlyResponse}
-            onChange={(e) => handleResponseChange(response.guestId, e.target.value)}
-          >
-            <option>Choose One</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+          <div>
+            <label>
+              <input
+                type="radio"
+                name={`response-${response.guestId}`}
+                value="Yes"
+                checked={response.earlyResponse === 'Yes'}
+                onChange={(e) => handleResponseChange(response.guestId, e.target.value)}
+              />
+              Yes
+            </label>
+            <label>
+              <input
+                type="radio"
+                name={`response-${response.guestId}`}
+                value="No"
+                checked={response.earlyResponse === 'No'}
+                onChange={(e) => handleResponseChange(response.guestId, e.target.value)}
+              />
+              No
+            </label>
+          </div>
         </div>
       ))}
       <button onClick={handleSubmitResponse}>Submit</button>
