@@ -21,9 +21,12 @@ app.use(session({
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-const userRoutes = require('./routes/users');
-app.use('/', userRoutes);
+// const userRoutes = require('./routes/users');
+// app.use('/', userRoutes);
 // app.use('/users', require('./routes/users'));
+const guestsRouter = require('./routes/api/guests');
+
+app.use('/api/guests', guestsRouter);
 
 app.get('/', (req, res) => res.send('Hello world!'));
 

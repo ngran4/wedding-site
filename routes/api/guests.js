@@ -4,7 +4,11 @@ const guestsCtrl = require('../../controllers/guests');
 
 router.get('/test', guestsCtrl.testGuests)
 
-router.post('/rsvp', guestsCtrl.rsvpFormHandler);
-router.get('/rsvp-status/:groupId', guestsCtrl.getGroupRSVPStatus)
+router.get('/search', guestsCtrl.searchGuest);
+router.post('/:guestId/early-response', guestsCtrl.updateEarlyResponse);
+
+
+// router.post('/rsvp', guestsCtrl.rsvpFormHandler);
+// router.get('/rsvp-status/:groupId', guestsCtrl.getGroupRSVPStatus)
 
 module.exports = router;

@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import RsvpForm from './EarlyRsvp/EarlyRsvpForm';
+import EarlyRsvpForm from './EarlyRsvp/EarlyRsvpForm';
+import SearchGuest from './SearchGuest/SearchGuest';
 
 const RSVP = () => {
+  const [groupData, setGroupData] = useState(null);
   return (
-    <>
-    <RsvpForm />
-    </>
+    <div>
+      <h1>RSVP</h1>
+      <SearchGuest setGroupData={setGroupData} />
+      {groupData ? (
+        <EarlyRsvpForm group={groupData} />
+      ) : (
+        <p>Search your name to start your RSVP.</p>
+      )}
+    </div>
   )
 }
 
 export default RSVP
+
+
 // const RSVP = () => {
 //   const [guestName, setGuestName] = useState(''); // single state for full name entry
 //   const [group, setGroup] = useState(null);

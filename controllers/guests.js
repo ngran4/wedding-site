@@ -7,36 +7,60 @@ const testGuests = (req, res) => {
 const searchGuest = async (req, res) => {
   try{
     const { fullName } = req.query;
+    console.log('Search Query:', fullName);
 
     // find guest by name (case-insensitive)
-    const guest = await Guest.findOne({ fullName: { $regex: fullName, $iptions: 'i'}}).populate('groupId');
+    const guest = await Guest.findOne({ fullName: { $regex: fullName, $options: 'i'}}).populate('group');
+    console.log('Guest Found:', guest);
     
     if (!guest) {
+      console.log('Guest not found');
       return res.status(404).json({message: 'Guest not found'});
     }
 
     //fetch all guests in the same group
-    const group = await Group.findById(quest.groupId).populate('members');
+    const groupMembers = await Group.findById(guest.group).populate('members');
+    console.log('Group Members:', groupMembers);
 
-    return res.json({ guest, group});
+    if (!groupMembers) {
+      console.log('Group not found');
+      return res.status(404).json({ message: 'Group not found' });
+    }
+
+    return res.json({ guest, groupMembers });
 
   } catch (error) {
     console.error(error);
-    return res.status(500).json({ message: 'Sevver error'});
+    return res.status(500).json({ message: 'Server error'});
   }
 }
 
 const updateEarlyResponse = async (req, res) => {
   try {
-    const { guestId } = req.params.id;
+    const { guestId } = req.params;
     console.log('GUEST ID ====>',guestId);
     const { earlyResponse } = req.body;
     console.log('EARLY RESPONSE ====>',earlyResponse);
+
+        // Validate earlyResponse input
+        // if (!['Yes', 'No', 'Pending'].includes(earlyResponse)) {
+        //   return res.status(400).json({ message: 'Invalid early response value' });
+        // }
     
-    // const guest = await Guest.findByIdAndUpdate
+    const guest = await Guest.findByIdAndUpdate(
+      guestId,
+      { earlyResponse },
+      { new: true }
+    );
+
+    if (!guest) {
+      return res.status(404).json({ message: 'Guest not found'});
+    }
+
+    return res.json({ message: 'Early response updated successfully', guest });
   } catch (error) {
     console.error(error);
-    res.status(500).send('Server error.');
+    res.status(500).json({ message: 'Server error' });
 }
 };
 
@@ -97,4 +121,5 @@ const updateEarlyResponse = async (req, res) => {
 module.exports = {
   testGuests,
   searchGuest,
+  updateEarlyResponse,
 }

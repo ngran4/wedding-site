@@ -2,18 +2,21 @@ const mongoose = require("mongoose");
 
 const guestSchema = new mongoose.Schema({
   fullName: { type: String, required: true },
-  email: { type: String, required: false, unique: true },
-  earlyResponse: { type: String, enum: ["yes", "no"], default: "Pending" },
-  groupId: { type: mongoose.Schema.Types.ObjectId, ref: "Group" },
+  email: { type: String},
+  earlyResponse: { type: String, enum: ["Yes", "No", "Pending"], default: "Pending" },
+  rsvp: {
+    response: {type: String, enum: ["Accepted", "Declined", "Pending"], default: "Pending"},
+    mealPreference: { type: String }, // Subcategory for dietary preferences
+    specialRequests: { type: String }, // Subcategory for other dietary needs
+  },
+  group: { type: mongoose.Schema.Types.ObjectId, ref: "Group" },
 });
 
 const Guest = mongoose.model("Guest", guestSchema);
 
 const groupSchema = new mongoose.Schema({
-  groupName: { type: String, required: true },
-  primaryContact: { type: mongoose.Schema.Types.ObjectId, ref: 'Guest' }, // Main contact
-  members: { type: String, enum: ['Accepted', 'Declined', 'Pending'], default: 'Pending' }, // Overall group RSVP
-  rsvpStatus: { type: String, default: "Pending" }, // e.g. "pending"
+  groupName: { type: String, required: false },
+  members:  [{ type: mongoose.Schema.Types.ObjectId, ref: 'Guest' }],
 });
 
 const Group = mongoose.model("Group", groupSchema);

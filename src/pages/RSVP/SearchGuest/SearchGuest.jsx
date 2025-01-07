@@ -4,28 +4,36 @@ import axios from 'axios'
 
 const SearchGuest = ({setGroupData}) => {
 
-  const [fullName, setFullName] = useState('');
-  const [error, setError] = useState('');
+  const [searchFullName, setSearchFullName] = useState("");
+  const [error, setError] = useState("");
+
 
   const handleSearch = async () => {
-    try {
-      const res = await axios.get(`/api/guests/search>fullName=${fullName}`);
-      setGroupData(res.data);
-
-    } catch(err) {
-      setError('Guest not found');
-    }
+  
+      try {
+        const res = await axios.get(`/api/guests/search`, { params: { fullName: searchFullName } });
+        console.log(res, 'api response')
+        setGroupData(res.data.groupMembers);
+        setError("");
+      } catch (err) {
+        console.error("Error fetching group data:", err);
+        console.log('Error Response:', err.response);
+        setError(err.response?.data?.message || "Error fetching group data");
+        setGroupData(null); // Clear group data
+      }
   }
+
   return (
     <div>
-      <input 
-      type="text"
-      placeholder="Enter full name"
-      value={fullName}
-      onChange={(e) => setFullName(e.target.value)}
+      <h2>Input Name</h2>
+      <input
+        type="text"
+        placeholder="Enter your full name"
+        value={searchFullName}
+        onChange={(e) => setSearchFullName(e.target.value)}
       />
-      <button onClick={handdleSearch}>Search</button>
-      {error && <p>{error}</p>}
+      <button onClick={handleSearch}>Search</button>
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   )
 }
