@@ -1,0 +1,19 @@
+.search-guest__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search-guest__container input {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 4px;
+  border: 1px solid black;
+}
+
+.search-btn {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 2px;
+  display: block;
+}

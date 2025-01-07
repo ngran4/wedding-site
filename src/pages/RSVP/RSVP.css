@@ -1,0 +1,30 @@
+.RSVP__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.name-date__container, .address__container {
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding: 5%;
+}
+
+.name-date__container {
+  background-color: var(--primary-neutral);
+}
+
+.name-date__container h1 {
+  font-family: var(--second-font);
+  font-size: 3rem;
+}
+
+.address__container h3 {
+  font-family: var(--second-font);
+  font-size: 2rem;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import './SearchGuest.css'
 
 
 const SearchGuest = ({setGroupData}) => {
@@ -24,15 +25,15 @@ const SearchGuest = ({setGroupData}) => {
   }
 
   return (
-    <div>
-      <h2>Input Name</h2>
+    <div className="search-guest__container">
       <input
+        id="input-search-guest"
         type="text"
         placeholder="Enter your full name"
         value={searchFullName}
         onChange={(e) => setSearchFullName(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className="btn search-btn" onClick={handleSearch}>Search</button>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   )

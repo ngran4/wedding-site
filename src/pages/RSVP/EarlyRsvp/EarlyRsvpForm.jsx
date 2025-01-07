@@ -15,24 +15,30 @@ const EarlyRsvpForm = ({ group }) => {
     }))
   );
 
+
   const handleResponseChange = (guestId, val) => {
-    setResponses((prevResponses) =>
-      prevResponses.map((response) =>
+    // console.log('Changing response for guestId:', guestId, 'to', val);
+    setResponses((prevResponses) => {
+      const updatedResponses = prevResponses.map((response) =>
         response.guestId === guestId
           ? { ...response, earlyResponse: val }
           : response
-      )
-    );
+      );
+      // console.log('Updated responses:', updatedResponses);
+      return updatedResponses;
+    });
   };
 
   const handleSubmitResponse = async () => {
     try {
       await Promise.all(
-        responses.map((response) =>
+        responses.map((response) => {
+          const url = `/api/guests/${response.guestId}/early-response`;
+          console.log('Submitting RSVP to URL:', url);
         axios.patch(`api/guests/${response.guestId}/early-response`, {
           earlyResponse: response.earlyResponse,
         })
-        )
+    })
       );
       alert("Rsvp Submitted");
     } catch (error) {
@@ -52,7 +58,7 @@ const EarlyRsvpForm = ({ group }) => {
             value={response.earlyResponse}
             onChange={(e) => handleResponseChange(response.guestId, e.target.value)}
           >
-            {/* <option value="Pending">Pending</option> */}
+            <option>Choose One</option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
           </select>

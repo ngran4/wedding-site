@@ -1,8 +1,5 @@
 const { Guest, Group } = require("../models/guest");
 
-const testGuests = (req, res) => {
-  return res.send('rsvp route testing!')
-}
 
 const searchGuest = async (req, res) => {
   try{
@@ -37,8 +34,9 @@ const searchGuest = async (req, res) => {
 
 const updateEarlyResponse = async (req, res) => {
   try {
+    console.log(req.params, 'REQ PARAMS')
     const { guestId } = req.params;
-    console.log('GUEST ID ====>',guestId);
+    console.log('GUEST ID ====>', guestId);
     const { earlyResponse } = req.body;
     console.log('EARLY RESPONSE ====>',earlyResponse);
 
@@ -119,7 +117,6 @@ const updateEarlyResponse = async (req, res) => {
 
 
 module.exports = {
-  testGuests,
   searchGuest,
   updateEarlyResponse,
 }

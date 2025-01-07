@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const guestsCtrl = require('../../controllers/guests');
 
-router.get('/test', guestsCtrl.testGuests)
 
 router.get('/search', guestsCtrl.searchGuest);
 router.post('/:guestId/early-response', guestsCtrl.updateEarlyResponse);
