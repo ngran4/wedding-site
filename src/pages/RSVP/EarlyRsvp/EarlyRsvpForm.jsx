@@ -7,6 +7,7 @@ import "./EarlyRsvpForm.css";
 // const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 const EarlyRsvpForm = ({ group }) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [responses, setResponses] = useState(
     group.members.map((member) => ({
       guestId: member._id,
@@ -14,7 +15,6 @@ const EarlyRsvpForm = ({ group }) => {
       earlyResponse: member.earlyResponse || "Pending",
     }))
   );
-
 
   const handleResponseChange = (guestId, val) => {
     // console.log('Changing response for guestId:', guestId, 'to', val);
@@ -29,107 +29,89 @@ const EarlyRsvpForm = ({ group }) => {
     });
   };
 
-  // const handleSubmitResponse = async () => {
-  //   try {
-  //     await Promise.all(
-  //       responses.map((response) => {
-  //         const url = `/api/guests/${response.guestId}/early-response`;
-  //         console.log(`Sending PATCH request to URL: ${url}`);
-  //       axios.patch(`api/guests/${response.guestId}/early-response`, {
-  //         earlyResponse: response.earlyResponse,
-  //       })
-  //   })
-  //     );
-  //     // alert("Rsvp Submitted");
-  //   } catch (error) {
-  //     console.error("Error submitting RSVP", error);
-  //     alert("Error submitting RSVP");
-  //   }
-  // }
-
   const handleSubmitResponse = async () => {
     try {
-      await Promise.all(responses.map(async (response) => {
-        const url = `/api/guests/${response.guestId}/early-response`; // Ensure the URL starts with a slash
-        console.log(`Sending PATCH request to: ${url}`);
-        try {
-          const res = await axios.patch(url, {
+      await Promise.all(
+        responses.map((response) => {
+          const url = `/api/guests/${response.guestId}/early-response`;
+          console.log(`Sending PATCH request to URL: ${url}`);
+          axios.patch(`api/guests/${response.guestId}/early-response`, {
             earlyResponse: response.earlyResponse,
           });
-          console.log('Response:', res);
-        } catch (err) {
-          console.error(`Error for guestId ${response.guestId}:`, err);
-        }
-      }));
-      alert("Rsvp Submitted");
+        })
+      );
+      setIsSubmitted(true); 
     } catch (error) {
       console.error("Error submitting RSVP", error);
       alert("Error submitting RSVP");
     }
   };
 
+  // const handleSubmitResponse = async () => {
+  //   try {
+  //     await Promise.all(responses.map(async (response) => {
+  //       const url = `/api/guests/${response.guestId}/early-response`;
+  //       console.log(`Sending PATCH request to: ${url}`);
+  //       try {
+  //         const res = await axios.patch(url, {
+  //           earlyResponse: response.earlyResponse,
+  //         });
+  //         console.log('Response:', res);
+  //       } catch (err) {
+  //         console.error(`Error for guestId ${response.guestId}:`, err);
+  //       }
+  //     }));
+  //     alert("Rsvp Submitted");
+  //   } catch (error) {
+  //     console.error("Error submitting RSVP", error);
+  //     alert("Error submitting RSVP");
+  //   }
+  // };
+
   return (
     <div className="rsvp-form__container">
-      <h2>RSVP for Group: {group.groupName}</h2>
-      {responses.map((response) => (
-        <div key={response.guestId}>
-          <label>{response.fullName}</label>
-          <div>
-            <label>
-              <input
-                type="radio"
-                name={`response-${response.guestId}`}
-                value="Yes"
-                checked={response.earlyResponse === 'Yes'}
-                onChange={(e) => handleResponseChange(response.guestId, e.target.value)}
-              />
-              Yes
-            </label>
-            <label>
-              <input
-                type="radio"
-                name={`response-${response.guestId}`}
-                value="No"
-                checked={response.earlyResponse === 'No'}
-                onChange={(e) => handleResponseChange(response.guestId, e.target.value)}
-              />
-              No
-            </label>
-          </div>
-        </div>
-      ))}
-      <button onClick={handleSubmitResponse}>Submit</button>
+      {isSubmitted ? (
+        <h2>Thank you! Your rsvp has been submitted!</h2>
+      ) : (
+        <>
+          <h2>RSVP for Group: {group.groupName}</h2>
+          {responses.map((response) => (
+            <div key={response.guestId}>
+              <label>{response.fullName}</label>
+              <div>
+                <label>
+                  <input
+                    type="radio"
+                    name={`response-${response.guestId}`}
+                    value="Yes"
+                    checked={response.earlyResponse === "Yes"}
+                    onChange={(e) =>
+                      handleResponseChange(response.guestId, e.target.value)
+                    }
+                  />
+                  Yes
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    name={`response-${response.guestId}`}
+                    value="No"
+                    checked={response.earlyResponse === "No"}
+                    onChange={(e) =>
+                      handleResponseChange(response.guestId, e.target.value)
+                    }
+                  />
+                  No
+                </label>
+              </div>
+            </div>
+          ))}
+          <button onClick={handleSubmitResponse}>Submit</button>
+        </>
+      )}
     </div>
   );
 };
 
-// const EarlyRsvpForm = () => {
-//   const form = useRef();
-
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-
-//     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
-//       () => {
-//         console.log("SUCCESS!");
-//       },
-//       (error) => {
-//         console.log("FAILED...", error.text);
-//       }
-//     );
-//   };
-
-//   return (
-//     <form className="rsvp-form" ref={form} onSubmit={sendEmail}>
-//       <label>Name</label>
-//       <input type="text" name="guest_name" />
-//       <label>Email</label>
-//       <input type="email" name="guest_email" />
-//       <label>Message</label>
-//       <textarea name="message" />
-//       <input type="submit" value="Send" />
-//     </form>
-//   );
-// };
 
 export default EarlyRsvpForm;
