@@ -71,13 +71,13 @@ const EarlyRsvpForm = ({ group }) => {
   return (
     <div className="rsvp-form__container">
       {isSubmitted ? (
-        <h2>Thank you! Your rsvp has been submitted!</h2>
+        <h2>Thank you! Your RSVP has been submitted!</h2>
       ) : (
         <>
-          <h2>RSVP for Group: {group.groupName}</h2>
+          <h2 className="rsvp-title">RSVP for Group: {group.groupName}</h2>
           {responses.map((response) => (
-            <div key={response.guestId}>
-              <label>{response.fullName}</label>
+            <div className="group-members" key={response.guestId}>
+              <label id="member-name">{response.fullName}</label>
               <div>
                 <label>
                   <input
@@ -106,7 +106,7 @@ const EarlyRsvpForm = ({ group }) => {
               </div>
             </div>
           ))}
-          <button onClick={handleSubmitResponse}>Submit</button>
+          <button className="btn rsvp-btn" onClick={handleSubmitResponse}>Submit</button>
         </>
       )}
     </div>

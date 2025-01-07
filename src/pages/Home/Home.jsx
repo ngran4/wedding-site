@@ -102,9 +102,9 @@ const Home = () => {
       <div className="about__container">
         <div id="about__title">OUR <br /> STORY</div>
       </div>
-      {/* <div className="footer__container">
+
         <Footer />
-      </div> */}
+  
     </>
   );
 };

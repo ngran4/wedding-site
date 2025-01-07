@@ -4,10 +4,12 @@ import "./RSVP.css";
 
 import EarlyRsvpForm from "./EarlyRsvp/EarlyRsvpForm";
 import SearchGuest from "./SearchGuest/SearchGuest";
+import Footer from "../../components/Footer/Footer";
 
 const RSVP = () => {
   const [groupData, setGroupData] = useState(null);
   return (
+    <>
     <div className="RSVP__container">
       {groupData ? (
         <EarlyRsvpForm group={groupData} />
@@ -34,7 +36,10 @@ const RSVP = () => {
           </div>
         </>
       )}
+    
     </div>
+  <Footer />
+  </>
   );
 };
 

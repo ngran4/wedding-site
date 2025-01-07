@@ -5,17 +5,33 @@
   background-color: var(--primary-neutral);
   height: 100vh;
   width: 100%;
+  padding: 30px;
 }
 
+.rsvp-form__container .rsvp-title {
+  margin-bottom: 20px;
+}
 
 .rsvp-form__container div {
   margin: 10px 0;
 }
 
 .rsvp-form__container label {
-  margin-right: 10px;
+  margin: 10px;
 }
 
 .rsvp-form__container input[type="radio"] {
   margin-right: 5px;
+}
+
+.group-members {
+  padding: 8px;
+}
+
+#member-name {
+  font-size: 20px;
+}
+
+.rsvp-btn {
+  margin-top: 10px;
 }
