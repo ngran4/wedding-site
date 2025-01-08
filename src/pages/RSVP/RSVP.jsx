@@ -5,6 +5,7 @@ import "./RSVP.css";
 import EarlyRsvpForm from "./EarlyRsvp/EarlyRsvpForm";
 import SearchGuest from "./SearchGuest/SearchGuest";
 import Footer from "../../components/Footer/Footer";
+import Map from "../../components/Map/Map";
 
 const RSVP = () => {
   const [groupData, setGroupData] = useState(null);
@@ -32,7 +33,11 @@ const RSVP = () => {
             <h3 id="address-title">Time & Location</h3>
             <p id="-date-time">Sep 07, 2025, 4:00 PM</p>
             <p id="address">Via delle Ville, 2400, 55100 Lucca LU, Italy</p>
-            <div className="map__container">MAP</div>
+            {/* <div className="map__container">MAP</div> */}
+            
+            <div className="map__container">
+            <Map />
+            </div>
           </div>
         </>
       )}

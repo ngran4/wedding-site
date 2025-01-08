@@ -32,3 +32,8 @@
   font-family: var(--second-font);
   font-size: 2rem;
 }
+
+.map__container {
+  height: 50vh;
+  margin: 20px;
+}
