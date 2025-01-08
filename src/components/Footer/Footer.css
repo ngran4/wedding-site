@@ -1,21 +1,40 @@
-.footer__container {
+
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  background-color: white;
+  padding: 0 3rem;
+  box-sizing: border-box;
   height: 10vh;
 }
 
 .upper-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: var(--primary-red);
   color: white;
   height: 50%;
-  justify-content: center;
 }
 .lower-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: white;
   height: 50%;
+}
+
+/* ----- MEDIA QUERIES ----- */
+
+@media (max-width: 768px) {
+  .footer {
+    padding:0;
+  }
 }

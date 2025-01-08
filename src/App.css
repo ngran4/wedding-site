@@ -6,10 +6,9 @@
   grid-template-rows: auto 1fr 1fr auto;
   grid-template-columns: 1fr;
   padding: 3rem;
-  /* border: 2px solid black; */
-  height: 100vh;
+  padding-bottom: 0;
+  min-height: 100vh;
   box-sizing: border-box;
-  padding-top: var(--header-height);
 }
 
 /* .main__content > div {
@@ -17,9 +16,9 @@
   padding: 10px; 
 } */
 
-.header, .footer {
+/* .header, .footer {
   grid-column: span 1;
-}
+} */
 
 
 /* ----- MEDIA QUERIES ----- */
@@ -29,10 +28,10 @@
     grid-template-rows: repeat(4, auto);
     grid-template-columns: 1fr;
     border: none;
-    padding: 100px 0;
+    padding: 3rem 0;
   }
-
+/* 
   .header, .footer {
     grid-column: span 1;
-  }
+  } */
 }

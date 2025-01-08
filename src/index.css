@@ -24,6 +24,7 @@
   --font-semi-bold: 600;
   --z-tooltip: 10;
   --z-fixed: 100;
+  --border-padding: 3rem;
  }
  
  body {

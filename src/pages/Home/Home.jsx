@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import Footer from "../../components/Footer/Footer";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 // import Hero from "./Hero/Hero";
 // import DetailsBlock from "./DetailsBlock/DetailsBlock";
@@ -102,8 +101,6 @@ const Home = () => {
       <div className="about__container">
         <div id="about__title">OUR <br /> STORY</div>
       </div>
-
-        <Footer />
   
     </>
   );

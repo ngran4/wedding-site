@@ -14,6 +14,8 @@
   position: relative;
   height: var(--header-height);
   margin: 1rem;
+  box-sizing: border-box;
+  padding: 0 3rem;
 }
 
 .nav__logo {
@@ -79,6 +81,13 @@
   right: 0;
 }
 
+/* ----- MEDIA QUERIES ----- */
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0;
+  }
+}
 
 /*this smooths the transition, but causes menu items to be at the 
 far left of the page */
