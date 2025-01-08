@@ -29,6 +29,7 @@
     grid-template-columns: 1fr;
     border: none;
     padding: 3rem 0;
+    padding-bottom: 0;
   }
 /* 
   .header, .footer {
