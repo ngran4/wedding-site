@@ -17,3 +17,13 @@
   margin: 2px;
   display: block;
 }
+
+@media (max-width: 768px) {
+  .search-guest__container input {
+    width: 55%;
+  }
+
+  .search-btn {
+    width: 55%;
+  }
+}
