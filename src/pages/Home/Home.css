@@ -32,6 +32,8 @@
   font-family: var(--title-font);
   font-style: italic;
   line-height: 105%;
+  /* color: var(--primary-blue);
+  font-weight: 500; */
 }
 
 #ampersand {
@@ -57,6 +59,21 @@
   display: inline;
 }
 
+/* .date-container {
+  font-size: 2rem;
+} */
+
+.date-container .lastName {
+  font-size: 20px;
+  vertical-align: super;
+  letter-spacing: 2px;
+}
+
+.date-container .dot {
+  font-size: 25px;
+  margin: 0 10px;
+  /* color: var(--primary-blue); */
+}
 
 .DetailsBlock__container, .RsvpBlock__container {
   display: grid;
