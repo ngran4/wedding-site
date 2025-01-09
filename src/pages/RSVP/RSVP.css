@@ -20,7 +20,7 @@
 }
 
 .name-date__container h1 {
-  font-family: var(--second-font);
+  font-family: var(--title-font);
   font-size: 3rem;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .address__container h3 {
-  font-family: var(--second-font);
+  font-family: var(--title-font);
   font-size: 2rem;
 }
 

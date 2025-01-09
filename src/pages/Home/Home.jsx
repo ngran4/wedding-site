@@ -11,6 +11,7 @@ const primaryRed = getComputedStyle(document.documentElement).getPropertyValue('
 const Home = () => {
   return (
     <>
+    <div className="home__container">
       <div className="hero__container">
         <div className="hero__textbox">
           <p id="hero-intro">Join Us For The Upcoming Wedding Of</p>
@@ -101,7 +102,7 @@ const Home = () => {
       <div className="about__container">
         <div id="about__title">OUR <br /> STORY</div>
       </div>
-  
+  </div>
     </>
   );
 };
