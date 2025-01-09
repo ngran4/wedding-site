@@ -154,17 +154,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;;
   background-color: var(--primary-neutral);
 }
 
 .events-block .events {
-  padding: 35px 0;
+  font-size: 22px;
+}
+
+.events-block p {
+  font-size: 15px;
 }
 
 .events-block .event-time {
   color: var(--primary-red);
   font-family: var(--title-font);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 500;
   display: inline;
 }

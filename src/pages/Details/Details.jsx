@@ -60,8 +60,9 @@ const Details = () => {
             >
               4
             </div>
-            <span style={{ color: primaryRed,  paddingRight: '8px' }}> pm</span>{" "}
+            <span style={{ color: primaryRed,  paddingRight: '7px' }}> pm</span>{" "}
             Ceremony
+            <p>The ceremony will be located on the Duna</p>
           </div>
           <div>
             <div
@@ -71,6 +72,7 @@ const Details = () => {
             </div>
             <span style={{ color: primaryRed,  paddingRight: '8px' }}> pm</span>{" "}
             Aperitivo
+            <p>Join us for a cocktail hour in the garden</p>
           </div>
           <div>
             <div
@@ -80,6 +82,7 @@ const Details = () => {
             </div>
             <span style={{ color: primaryRed, paddingRight: '8px' }}> pm</span>{" "}
             Reception
+            <p>Dinner, daincing and speeches</p>
           </div>
           </div>
         </div>
