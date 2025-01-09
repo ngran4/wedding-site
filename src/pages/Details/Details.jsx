@@ -14,7 +14,8 @@ const Details = () => {
           </h3>
         </div>
         <div className="transportation-block">
-          <h2>Transportation</h2>
+          <h2>TRANSPORTATION</h2>
+          <div className="vl"></div>
           <p>
             Parking is limited at the venue, so we will be providing a bus to
             pick guests up in Lucca city center and a shuttle to return guests
@@ -22,14 +23,16 @@ const Details = () => {
           </p>
         </div>
         <div className="accomodation-block">
-          <h2>Accommodations</h2>
+          <h2>ACCOMODATIONS</h2>
+          <div className="vl"></div>
           <p>
             There are many hotels in the area. Please return at a later date for
             a more detailed list.
           </p>
         </div>
         <div className="attire-block">
-          <h2>Attire</h2>
+          <h2>ATTIRE</h2>
+          <div className="vl"></div>
           <p>
             Formal or cocktail attire is requested. Further details will be
             provided after invitations are sent.
