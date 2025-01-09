@@ -158,20 +158,26 @@
   background-color: var(--primary-neutral);
 }
 
-.events-block .events {
-  font-size: 22px;
+.events-block .event {
+  font-size: 20px;
 }
 
 .events-block p {
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .events-block .event-time {
   color: var(--primary-red);
   font-family: var(--title-font);
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 500;
   display: inline;
+}
+
+.events-block .dot {
+  font-size: 25px;
+  margin-top: 1.2rem;
+  margin-bottom: -1.5rem;
 }
 
 

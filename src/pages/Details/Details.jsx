@@ -1,5 +1,6 @@
 import React from "react";
 import "./Details.css";
+import { PiDotOutlineFill } from "react-icons/pi";
 
 const primaryRed = getComputedStyle(document.documentElement).getPropertyValue('--primary-red');
 
@@ -53,8 +54,7 @@ const Details = () => {
 
         </div>
         <div className="events-block">
-        <div className="events">
-          <div>
+          <div className="event">
             <div 
               className="event-time"
             >
@@ -64,7 +64,8 @@ const Details = () => {
             Ceremony
             <p>The ceremony will be located on the Duna</p>
           </div>
-          <div>
+          <PiDotOutlineFill className="dot" />
+          <div className="event">
             <div
               className="event-time"
             >
@@ -74,7 +75,8 @@ const Details = () => {
             Aperitivo
             <p>Join us for a cocktail hour in the garden</p>
           </div>
-          <div>
+          <PiDotOutlineFill className="dot" />
+          <div className="event">
             <div
             className="event-time"
             >
@@ -83,7 +85,6 @@ const Details = () => {
             <span style={{ color: primaryRed, paddingRight: '8px' }}> pm</span>{" "}
             Reception
             <p>Dinner, daincing and speeches</p>
-          </div>
           </div>
         </div>
         <div className="bottom-block">registry?</div>
