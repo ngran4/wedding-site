@@ -44,7 +44,7 @@ const Details = () => {
         </div>
         </div>
 
-        <div className="photo-block">photo here</div>
+        <div className="photo-block"></div>
         <div className="schedule-block">
           <h2>SCHEDULE</h2>
           <div className="vl"></div>
@@ -87,7 +87,7 @@ const Details = () => {
             <p>Dinner, daincing and speeches</p>
           </div>
         </div>
-        <div className="bottom-block">registry?</div>
+        <div className="bottom-block">registry coming soon :)</div>
       </div>
     </>
   );

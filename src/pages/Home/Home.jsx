@@ -100,7 +100,7 @@ const Home = () => {
       </div>
 
       <div className="about__container">
-        <div id="about__title">OUR <br /> STORY</div>
+        {/* <div id="about__title">OUR <br /> STORY</div> */}
       </div>
   </div>
     </>

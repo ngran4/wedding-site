@@ -115,7 +115,9 @@
 
 .photo-block {
   grid-area: photo-block;
-  flex-direction: column;
+  background-image: url("../../../public/assets/amsterdam.JPG");
+  background-size: cover;
+  background-position: center bottom  29%;
 }
 
 .schedule-block {
