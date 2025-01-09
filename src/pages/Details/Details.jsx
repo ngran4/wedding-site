@@ -1,6 +1,8 @@
 import React from "react";
 import "./Details.css";
 
+const primaryRed = getComputedStyle(document.documentElement).getPropertyValue('--primary-red');
+
 const Details = () => {
   return (
     <>
@@ -13,13 +15,14 @@ const Details = () => {
             Grabau. Here's everything else you need to know.{" "}
           </h3>
         </div>
-        <div className="transportation-block">
+        <div className="TAA__container">
+                  <div className="transportation-block">
           <h2>TRANSPORTATION</h2>
           <div className="vl"></div>
           <p>
             Parking is limited at the venue, so we will be providing a bus to
             pick guests up in Lucca city center and a shuttle to return guests
-            will be running from 10pm-12pm
+            will be running from 10pm-12pm.
           </p>
         </div>
         <div className="accomodation-block">
@@ -38,9 +41,48 @@ const Details = () => {
             provided after invitations are sent.
           </p>
         </div>
+        </div>
+
         <div className="photo-block">photo here</div>
-        <div className="address-block">address</div>
-        <div className="schedule-block">schedule</div>
+        <div className="schedule-block">
+          <h2>SCHEDULE</h2>
+          <div className="vl"></div>
+          <p>All three events will take place at the</p>
+          <h1>Arancera House</h1>
+          <p>Via delle Ville, 2400, 55100 Lucca LU, Italy</p>
+
+        </div>
+        <div className="events-block">
+        <div className="events">
+          <div>
+            <div 
+              className="event-time"
+            >
+              4
+            </div>
+            <span style={{ color: primaryRed,  paddingRight: '8px' }}> pm</span>{" "}
+            Ceremony
+          </div>
+          <div>
+            <div
+              className="event-time"
+            >
+              5
+            </div>
+            <span style={{ color: primaryRed,  paddingRight: '8px' }}> pm</span>{" "}
+            Aperitivo
+          </div>
+          <div>
+            <div
+            className="event-time"
+            >
+              6
+            </div>
+            <span style={{ color: primaryRed, paddingRight: '8px' }}> pm</span>{" "}
+            Reception
+          </div>
+          </div>
+        </div>
         <div className="bottom-block">registry?</div>
       </div>
     </>

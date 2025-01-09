@@ -5,9 +5,9 @@
   gap: 0px 0px; 
   grid-template-areas: 
     "details__hero details__hero details__hero details__hero details__hero details__hero"
-    "transportation-block transportation-block accomodation-block accomodation-block attire-block attire-block"
+    "TAA__container TAA__container TAA__container TAA__container TAA__container TAA__container"
     "photo-block photo-block photo-block photo-block photo-block photo-block"
-    "address-block address-block address-block schedule-block schedule-block schedule-block"
+    "schedule-block schedule-block schedule-block events-block events-block events-block"
     "bottom-block bottom-block bottom-block bottom-block bottom-block bottom-block"; 
 } 
 
@@ -43,73 +43,79 @@
   line-height: 1.3;
   margin-bottom: 6%;
 }
-.transportation-block .vl {
-  width: 1px;
-  height: 60px;
-  color: #fff1d6;
+
+.TAA__container {
+  grid-area: TAA__container;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "transportation-block accomodation-block attire-block"; 
 }
 
-.accomodation-block .vl {
-  width: 1px;
-  height: 60px;
-  color: #fff1d6;
+.TAA__container .vl {
+  width: 1.6px;
+  height: 55px;
+  margin: 1.5rem 0;
 }
 
-.attire-block .vl {
-  width: 1px;
-  height: 60px;
-  color: #fff1d6;
+.TAA__container h2 {
+  font-weight: 380;
+  font-size: 1.3rem;
+  margin: 0;
+  padding-top: 8rem;
+  letter-spacing: 3px;
+}
+
+.TAA__container p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.transportation-block, .accomodation-block, .attire-block {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  justify-items: center;
+  align-items: start;
+  text-align: center;
+  padding: 1rem 3rem;
 }
 
 .transportation-block {
   grid-area: transportation-block;
-  background-color: #afc8d9;
-  color: #fff1d6;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-color: var(--primary-blue);
+  color: var(--primary-cream);
 }
 
-.transportation-block h2 {
-  font-weight: 400;
-  font-size: 1.3rem;
+.transportation-block .vl {
+  background-color: var(--primary-cream);
 }
 
 .accomodation-block {
   grid-area: accomodation-block;
-  background-color: #fff1d6;
-  color: #8fa253;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-color: var(--primary-cream);
+  color: var(--primary-green);
+}
+
+.accomodation-block .vl {
+  background-color: var(--primary-green);
+  width: 1.7px;
 }
 
 .attire-block {
   grid-area: attire-block;
-  background-color: #ad718c;
-  color: #fff1d6;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-color: var(--primary-purple);
+  color: var(--primary-cream);
 }
+
+.attire-block .vl {
+  background-color: var(--primary-cream);
+}
+
 
 .photo-block {
   grid-area: photo-block;
   flex-direction: column;
-}
-
-.address-block {
-  grid-area: address-block;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .schedule-block {
@@ -118,7 +124,51 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--primary-red);
+  color:var(--primary-cream)
 }
+
+.schedule-block .vl {
+  background-color: var(--primary-cream);
+  height: 55px;
+  margin: 1.5rem 0;
+}
+
+.schedule-block h2 {
+  font-size: 1.3rem;
+  font-weight: 380;
+}
+
+.schedule-block h1 {
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+}
+
+.schedule-block p {
+  font-size:20px;
+}
+
+.events-block {
+  grid-area: events-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-neutral);
+}
+
+.events-block .events {
+  padding: 35px 0;
+}
+
+.events-block .event-time {
+  color: var(--primary-red);
+  font-family: var(--title-font);
+  font-size: 3rem;
+  font-weight: 500;
+  display: inline;
+}
+
 
 .bottom-block { 
   grid-area: bottom-block;
