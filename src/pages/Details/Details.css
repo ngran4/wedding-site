@@ -9,7 +9,6 @@
     "photo-block photo-block photo-block photo-block photo-block photo-block"
     "address-block address-block address-block schedule-block schedule-block schedule-block"
     "bottom-block bottom-block bottom-block bottom-block bottom-block bottom-block"; 
-    margin-top: 5%;
 } 
 
 .details__hero { 
@@ -19,17 +18,30 @@
   justify-content: center;
   align-items: center;
   font-family: var(--title-font);
+  background-color: var(--primary-neutral);
+}
+
+.details__container .vl {
+  width: 1px;
+  height: 7rem;
+  background-color: black;
+  margin: 1%;
 }
 
 #hero-title {
   font-size: 4rem;
+  font-style: italic;
+  margin: 1.5rem;
+
 }
 
 #hero-subtext {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 200;
   text-align: center;
   width: 65%;
+  line-height: 1.3;
+  margin-bottom: 6%;
 }
 
 .transportation-block {
@@ -43,6 +55,7 @@
 
 .accomodation-block {
   grid-area: accomodation-block;
+  background-color: var(--primary-neutral);
   display: flex;
   flex-direction: column;
   justify-content: center;

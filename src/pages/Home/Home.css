@@ -21,6 +21,7 @@
   margin: 0 10%;
 }
 
+
 #hero-intro {
   font-size: 1.4rem;
   padding: 4% 0;
@@ -159,10 +160,10 @@
 }
 
 .vl {
-width: 1px;
- height: 60px;
- background-color: black;
- margin: 4%; 
+  width: 1px;
+  height: 60px;
+  background-color: black;
+  margin: 4%; 
  }
 
 /* ----- MEDIA QUERIES ----- */

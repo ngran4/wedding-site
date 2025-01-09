@@ -44,6 +44,15 @@ const NavbarHook = () => {
         </li>
         <li>
           <NavLink
+          to="/RSVP"
+          className={linkClassName}
+          onClick={closeMobileMenu}
+          >
+            RSVP
+          </NavLink>
+        </li>
+        {/* <li>
+          <NavLink
             to="/wedding-party"
             className={linkClassName}
             onClick={closeMobileMenu}
@@ -59,7 +68,7 @@ const NavbarHook = () => {
           >
             REGISTRY
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     );
   };

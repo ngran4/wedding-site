@@ -20,6 +20,9 @@ const seedData = async () => {
     const grp001 = new Group({ groupName: "Granville Parents" });
     const grp002 = new Group({ groupName: "Erickson Parents" });
     const grp003 = new Group({ groupName: "Rothberg Family" });
+    const grp004 = new Group({ groupName: "Sunny Band" });
+    const grp005 = new Group({ groupName: "Horikawa Family"});
+
 
     // Save groups to DB
     await grp001.save();
@@ -72,6 +75,21 @@ const seedData = async () => {
         fullName: "Hanna Rothberg",
         earlyResponse: "Pending",
         group: grp003._id,
+      },
+      {
+        fullName: "Sunny Band",
+        earlyResponse: "Pending",
+        group: grp004._id,
+      },
+      {
+        fullName: "Cody",
+        earlyResponse: "Pending",
+        group: grp004._id,
+      },
+      {
+        fullName: "Sayrn Horikawa",
+        earlyResponse: "Pending",
+        group: grp005._id,
       }
     ];
 
