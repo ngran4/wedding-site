@@ -50,7 +50,7 @@ const Details = () => {
           <div className="vl"></div>
           <p>All three events will take place at the</p>
           <h1>Arancera House</h1>
-          <p>Via delle Ville, 2400, 55100 Lucca LU, Italy</p>
+          <p>Via delle Ville, 2400, 55100 Lucca LU</p>
 
         </div>
         <div className="events-block">
