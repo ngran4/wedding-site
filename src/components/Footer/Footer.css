@@ -20,7 +20,7 @@
   width: 100%;
   background-color: var(--primary-red);
   color: white;
-  height: 50%;
+  height: 60%;
 }
 .lower-footer {
   display: flex;
@@ -28,7 +28,8 @@
   align-items: center;
   width: 100%;
   background-color: white;
-  height: 50%;
+  height: 40%;
+  font-size: 13px;
 }
 
 /* ----- MEDIA QUERIES ----- */
