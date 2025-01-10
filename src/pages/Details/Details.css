@@ -201,7 +201,6 @@
   }
   .details__hero,
   .TAA__container,
-  .photo-block,
   .schedule-block,
   .events-block,
   .bottom-block {
@@ -227,7 +226,7 @@
    flex-direction: column;
   }
   .accomodation-block, .transportation-block, .attire-block {
-    padding: 4rem 1rem;
+    padding: 6rem 1rem;
   }
   
   .TAA__container p {
@@ -236,7 +235,10 @@
   .TAA__container h2 {
     padding-top: 0;
   }
-
+  .photo-block {
+    height: 350px;
+    width: 100%; 
+  }
   .schedule-block, .events-block {
     padding: 4rem 0;
   }
