@@ -9,7 +9,7 @@
   align-items: center;
   height: auto;
   background-color: rgb(252, 246, 236);
-  background-image: url("../../../public/assets/abstract-bg.jpeg");
+  background-image: url("/assets/abstract-bg.jpeg");
   background-size:cover;
   grid-column: span 1;
   padding: 5% 10%;
@@ -193,7 +193,7 @@
 .about__container {
   display: flex;
   height: 50vh;
-  background-image: url("../../../public/assets/amsterdam.JPG");
+  background-image: url("/assets/amsterdam.JPG");
   background-size: contain;
   background-position: center bottom  29%;
   justify-content: center;

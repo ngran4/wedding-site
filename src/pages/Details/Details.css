@@ -115,7 +115,7 @@
 
 .photo-block {
   grid-area: photo-block;
-  background-image: url("../../../public/assets/amsterdam.JPG");
+  background-image: url("/assets/amsterdam.JPG");
   background-size: cover;
   background-position: center bottom  29%;
 }
