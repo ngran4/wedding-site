@@ -216,6 +216,8 @@
   margin: 4%; 
  }
 
+
+
 /* ----- MEDIA QUERIES ----- */
 @media (max-width: 768px) {
   .home__container {
@@ -233,18 +235,13 @@
 
   .hero-textbox{
     min-width: 98%;
-    margin: auto;
+    margin: 1rem auto;
   }
   
-
   #hero-names {
     font-size: 3.8rem;
     /* padding: 0 4rem; */
   }
-
-  /* .date-container{
-    padding-bottom: 4%;
-  } */
   
   .hero-textbox .ampersand {
     top:2px;
