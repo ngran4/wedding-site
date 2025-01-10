@@ -4,6 +4,9 @@ import './Map.css'
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 
+  
+const token = process.env.REACT_APP_MAPBOX_PK
+
 const Map = () => {
 
   const mapRef = useRef()  
@@ -13,8 +16,10 @@ const Map = () => {
   const [center, setCenter] = useState([10.5157, 43.8430])
   const [zoom, setZoom] = useState(10.2)
 
+
   useEffect(() => {
-    mapboxgl.accessToken = 'pk.eyJ1IjoibmljZ3JhbnZpbGxlIiwiYSI6ImNtNW4zYWkxeTA2cmsyc3E1Y29lc2MyZTcifQ.MegvnzLOKe7z--XKxx0VFg'
+    mapboxgl.accessToken = token;
+
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       center: center,
@@ -40,7 +45,7 @@ const Map = () => {
     return () => {
       mapRef.current.remove()
     }
-  }, [])
+  }, [center, zoom])
 
   return ( 
   <>

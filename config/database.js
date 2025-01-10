@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const db = process.env.DATABASE_URL;
+const db = process.env.REACT_APP_DATABASE_URL;
 
 mongoose.set("strictQuery", true, "useNewUrlParser", true);
 
