@@ -126,6 +126,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-color: var(--primary-red);
   color:var(--primary-cream)
 }
@@ -198,7 +199,6 @@
     display: flex;
     flex-direction: column;
   }
-
   .details__hero,
   .TAA__container,
   .photo-block,
@@ -206,11 +206,42 @@
   .events-block,
   .bottom-block {
     width: 100%;
-    margin-bottom: 1rem; /* Add some space between sections */
   }
 
+  .details__hero .vl {
+    height: 5rem;
+  }
+
+  #hero-title {
+    font-size: 3rem;
+    margin: 1rem;
+  }
+
+  #hero-subtext {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: 12%;
+  }
   .TAA__container {
    display: flex;
    flex-direction: column;
+  }
+  .accomodation-block, .transportation-block, .attire-block {
+    padding: 4rem 1rem;
+  }
+  
+  .TAA__container p {
+    padding-bottom: 0;
+  }
+  .TAA__container h2 {
+    padding-top: 0;
+  }
+
+  .schedule-block, .events-block {
+    padding: 4rem 0;
+  }
+
+  .bottom-block {
+    padding: 4rem 0;
   }
 }
