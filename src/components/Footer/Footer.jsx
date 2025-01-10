@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { PiCopyrightLight } from "react-icons/pi";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div id="footer-text">QUESTIONS? TEXT US!</div>
       </div>
       <div className="lower-footer">
-        copyright 2025 Nicole
+        <PiCopyrightLight /> 2030 Nicole Granille
       </div>
       </div>
   )

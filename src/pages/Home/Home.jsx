@@ -116,7 +116,7 @@ const Home = () => {
 
         <div className="RsvpBlock__container">
           <div className="RsvpBlock__link">
-            <p id="RsvpBlock__text">Please confirm your attendance</p>
+            <p id="RsvpBlock__text">Please fill out a non-committal RSVP</p>
             <div id="rsvp-btn">
               <a href="/rsvp" className="btn" style={{ color: "white" }}>
                 RSVP NOW
