@@ -10,7 +10,7 @@ const guestSchema = new mongoose.Schema({
     specialRequests: { type: String }, // Subcategory for other dietary needs
   },
   group: { type: mongoose.Schema.Types.ObjectId, ref: "Group" },
-});
+}, { timestamps: true });
 
 const Guest = mongoose.model("Guest", guestSchema);
 
