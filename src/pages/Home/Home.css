@@ -137,6 +137,7 @@
 .DetailsBlock__container .ampersand {
   display: inline-block;
   position: relative;
+  color: var(--primary-red);
   top: -4px;
   font-size: 7.2rem;
   font-family: "Old Standard TT", serif;

@@ -66,7 +66,7 @@ const Home = () => {
             <div id="where-when">
               WHERE
               <br />
-              <div className="ampersand" style={{ display: "inline", color: primaryRed }}>&</div>WHEN
+              <div className="ampersand">&</div>WHEN
             </div>
           </div>
           <div className="DetailsBlock__details">
