@@ -47,26 +47,6 @@ const EarlyRsvpForm = ({ group }) => {
     }
   };
 
-  // const handleSubmitResponse = async () => {
-  //   try {
-  //     await Promise.all(responses.map(async (response) => {
-  //       const url = `/api/guests/${response.guestId}/early-response`;
-  //       console.log(`Sending PATCH request to: ${url}`);
-  //       try {
-  //         const res = await axios.patch(url, {
-  //           earlyResponse: response.earlyResponse,
-  //         });
-  //         console.log('Response:', res);
-  //       } catch (err) {
-  //         console.error(`Error for guestId ${response.guestId}:`, err);
-  //       }
-  //     }));
-  //     alert("Rsvp Submitted");
-  //   } catch (error) {
-  //     console.error("Error submitting RSVP", error);
-  //     alert("Error submitting RSVP");
-  //   }
-  // };
 
   return (
     <div className="rsvp-form__container">
@@ -74,11 +54,13 @@ const EarlyRsvpForm = ({ group }) => {
         <h2>Thank you! Your RSVP has been submitted!</h2>
       ) : (
         <>
-          <h2 className="rsvp-title">Group: {group.groupName}</h2>
+          <h2 className="rsvp-title">{group.groupName}</h2>
+          <p id="disclaimer">We recognize that a destination wedding is not feasible for everyone
+            and will be planning a local event to celebrate with those who can't make it. Stay tuned for details!</p>
           {responses.map((response) => (
             <div className="group-members" key={response.guestId}>
               <label id="member-name">{response.fullName}</label>
-              <div>
+              <div className="response-lbl">
                 <label>
                   <input
                     type="radio"
@@ -89,9 +71,9 @@ const EarlyRsvpForm = ({ group }) => {
                       handleResponseChange(response.guestId, e.target.value)
                     }
                   />
-                  Yes
+                  Likely to attend
                 </label>
-                <label>
+                <label style={{display: "block", alignItems: "start"}}>
                   <input
                     type="radio"
                     name={`response-${response.guestId}`}
@@ -101,7 +83,7 @@ const EarlyRsvpForm = ({ group }) => {
                       handleResponseChange(response.guestId, e.target.value)
                     }
                   />
-                  No
+                  Unlikely to attend
                 </label>
               </div>
             </div>
