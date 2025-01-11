@@ -74,7 +74,7 @@ const EarlyRsvpForm = ({ group }) => {
         <h2>Thank you! Your RSVP has been submitted!</h2>
       ) : (
         <>
-          <h2 className="rsvp-title">RSVP for Group: {group.groupName}</h2>
+          <h2 className="rsvp-title">Group: {group.groupName}</h2>
           {responses.map((response) => (
             <div className="group-members" key={response.guestId}>
               <label id="member-name">{response.fullName}</label>
