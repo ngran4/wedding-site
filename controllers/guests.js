@@ -62,6 +62,16 @@ const updateEarlyResponse = async (req, res) => {
 }
 };
 
+const getAllRSVPs = async (req, res) => {
+  try{
+    const guests = await Guest.find().populate('group');
+    res.json(guests);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error'});
+  }
+}
+
 // Take RSVP object and calculate total number of guests attending, return RSVP status 
 // const calculateGroupRSVPStatus = (rsvp) => {
 //   const totalGuests = rsvp.guests.length;
@@ -119,4 +129,5 @@ const updateEarlyResponse = async (req, res) => {
 module.exports = {
   searchGuest,
   updateEarlyResponse,
+  getAllRSVPs,
 }

@@ -5,7 +5,7 @@ import Home from './pages/Home/Home';
 import RSVP from './pages/RSVP/RSVP';
 // import Login from './pages/Login/Login';
 // import Register from './pages/Register/Register';
-// import Dashboard from './pages/Dashboard/Dashboard';
+import Dashboard from './pages/Dashboard/Dashboard';
 import NavbarHook from './components/Navbar/NavbarHook/NavbarHook';
 import Footer from './components/Footer/Footer';
 // import Navbar from './components/Navbar/Navbar';
@@ -35,8 +35,8 @@ function App() {
         <Route path="/wedding-party" element={<WeddingParty />} />
         <Route path="/registry" element={<Registry />} />
         {/* <Route path="/login" element={<Login/>} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/dashboard" element={<Dashboard />} /> */}
+        <Route path="/register" element={<Register />} />*/}
+        <Route path="/dashboard" element={<Dashboard />} /> 
       </Routes>
       
       </div>

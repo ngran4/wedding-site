@@ -6,6 +6,8 @@ const guestsCtrl = require('../../controllers/guests');
 router.get('/search', guestsCtrl.searchGuest);
 router.patch('/:guestId/early-response', guestsCtrl.updateEarlyResponse);
 
+router.get('/rsvps', guestsCtrl.getAllRSVPs);
+
 
 // router.post('/rsvp', guestsCtrl.rsvpFormHandler);
 // router.get('/rsvp-status/:groupId', guestsCtrl.getGroupRSVPStatus)
