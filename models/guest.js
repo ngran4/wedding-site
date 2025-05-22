@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const guestSchema = new mongoose.Schema({
   fullName: { type: String, required: true },
   email: { type: String},
-  earlyResponse: { type: String, enum: ["Yes", "No", "Pending"], default: "Pending" },
+  welcomeDinnerRsvp: { type: String, enum: ["Accepted", "Declined", "Invited", "Not Invited"], default: "Not Invited" },
   rsvp: {
     response: {type: String, enum: ["Accepted", "Declined", "Pending"], default: "Pending"},
     mealPreference: { 
