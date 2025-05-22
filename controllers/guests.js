@@ -32,6 +32,26 @@ const searchGuest = async (req, res) => {
   }
 }
 
+const updateRSVP = async (req, res) => {
+  try {
+    const { guestId } = req.params;
+    const { rsvp } = req.body;
+    
+    // update rsvp and welcome dinner rsvp
+    const guest = await Guest.findByIdAndUpdate(
+      guestId,
+      {rsvp, welcomeDinnerRsvp },
+      {new: true}
+    );
+    if (!guest) {
+      return res.status(404).json({ message: 'Guest not found'});
+    }
+    return res.json({ message: 'RSVP updated successfully', guest });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error'});
+  } 
+}
 
 
 const updateEarlyResponse = async (req, res) => {
