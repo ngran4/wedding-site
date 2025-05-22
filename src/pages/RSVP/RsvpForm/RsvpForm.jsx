@@ -95,54 +95,78 @@ const RsvpForm = ({ group }) => {
               </div>
               {response.response === "Accepted" && (
                 <>
-                <div>
-                  <label> 
-                    First Course Preference: 
-                    <select
-                      value={response.mealPreference.firstCourse}
-                      onChange={(e) =>
-                        handleResponseChange(response.guestId, "mealPreference", {
-                          ...response.mealPreference,
-                          firstCourse: e.target.value,
-                        })
-                      }
-                      >
-                        <option value="">Select</option>
-                        <option value="Risotto">Saffron Risotto</option>
-                        <option value="Nest">Pasta nest stuffed with mozzarella di buffalo in tomato sauce</option>
-                      </select>
-                  </label>
-                </div>
-                <div>
-                    <label>
-                      Second Course Preference:
-                      <select
-                        value={response.mealPreference.secondCourse}
-                        onChange={(e) =>
-                          handleResponseChange(response.guestId, "mealPreference", {
-                            ...response.mealPreference,
-                            secondCourse: e.target.value,
-                          })
-                        }
-                      >
-                        <option value="">Select</option>
-                        <option value="Fillet">Robespierre Fillet</option>
-                        <option value="Pata Negra">Pata Negra Ingot</option>
-                      </select>
-                    </label>
-                  </div>
-                  <div>
-                    <label>
-                      Special Requests:
-                      <input
-                        type="text"
-                        value={response.specialRequests || "Allergies, dietary preferences, etc."}
-                        onChange={(e) =>
-                          handleResponseChange(response.guestId, "specialRequests", e.target.value)
-                        }
-                      />
-                    </label>
-                  </div>
+    <div className="fc-response">
+      <label>First Course Preference:</label>
+      <div className="button-group">
+        <button
+          type="button"
+          className={`meal-option ${response.mealPreference.firstCourse === "Risotto" ? "selected" : ""}`}
+          onClick={() =>
+            handleResponseChange(response.guestId, "mealPreference", {
+              ...response.mealPreference,
+              firstCourse: "Risotto",
+            })
+          }
+        >
+          Saffron Risotto
+        </button>
+        <button
+          type="button"
+          className={`meal-option ${response.mealPreference.firstCourse === "Nest" ? "selected" : ""}`}
+          onClick={() =>
+            handleResponseChange(response.guestId, "mealPreference", {
+              ...response.mealPreference,
+              firstCourse: "Nest",
+            })
+          }
+        >
+          Pasta Nest
+        </button>
+      </div>
+    </div>
+    <div>
+      <label>Second Course Preference:</label>
+      <div className="button-group">
+        <button
+          type="button"
+          className={`meal-option ${response.mealPreference.secondCourse === "Fillet" ? "selected" : ""}`}
+          onClick={() =>
+            handleResponseChange(response.guestId, "mealPreference", {
+              ...response.mealPreference,
+              secondCourse: "Fillet",
+            })
+          }
+        >
+          Robespierre Fillet
+        </button>
+        <button
+          type="button"
+          className={`meal-option ${response.mealPreference.secondCourse === "Pata Negra" ? "selected" : ""}`}
+          onClick={() =>
+            handleResponseChange(response.guestId, "mealPreference", {
+              ...response.mealPreference,
+              secondCourse: "Pata Negra",
+            })
+          }
+        >
+          Pata Negra Ingot
+        </button>
+      </div>
+    </div>
+    <div>
+      <label className="special-request-label">
+        Special Requests:
+        <textarea
+          value={response.specialRequests || ""}
+          onChange={(e) =>
+            handleResponseChange(response.guestId, "specialRequests", e.target.value)
+          }
+          rows="4" // Adjust the number of rows for height
+          cols="50" // Adjust the number of columns for width
+          style={{ resize: "none" }} // Optional: Prevent resizing
+        />
+      </label>
+    </div>
                 </>
               )}
               {response.welcomeDinnerRsvp !== "Not Invited" && (
