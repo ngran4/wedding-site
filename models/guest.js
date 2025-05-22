@@ -6,7 +6,10 @@ const guestSchema = new mongoose.Schema({
   earlyResponse: { type: String, enum: ["Yes", "No", "Pending"], default: "Pending" },
   rsvp: {
     response: {type: String, enum: ["Accepted", "Declined", "Pending"], default: "Pending"},
-    mealPreference: { type: String }, // Subcategory for dietary preferences
+    mealPreference: { 
+      firstCourse: { type: String, enum:["Risotto", "Nest"], required: false },
+      secondCourse: {type: String, enum: ["Fillet", "Pata Negra"], required: false}, 
+    },// Subcategory for dietary preferences
     specialRequests: { type: String }, // Subcategory for other dietary needs
   },
   group: { type: mongoose.Schema.Types.ObjectId, ref: "Group" },

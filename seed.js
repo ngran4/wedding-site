@@ -62,13 +62,13 @@ const seedData = async () => {
     const grp043 = new Group({ groupName: "Natalie Granville" });
     const grp044 = new Group({ groupName: "Jacob Granville" });
     const grp045 = new Group({ groupName: "Emma Thompson" });
-    const grp046 = new Group({ groupName: "Stephen Thompson" });
-    const grp047 = new Group({ groupName: "Robert Thompson" });
     const grp048 = new Group({ groupName: "Weiss Family" });
     const grp049 = new Group({ groupName: "Brett Rothberg" });
     const grp050 = new Group({ groupName: "James Erickson" });
     const grp051 = new Group({ groupName: "Calli Rothberg" });
     const grp052 = new Group({ groupName: "Jack Rothberg" });
+    const grp053 = new Group({ groupName: "Billie Rothberg"})
+    const grp054 = new Group({ groupName: "Casey Rothberg"})
 
 
 
@@ -78,8 +78,8 @@ const seedData = async () => {
       grp011, grp012, grp013, grp014, grp015, grp016, grp017, grp018, grp019, grp020,
       grp021, grp022, grp023, grp024, grp025, grp026, grp027, grp028, grp029, grp030,
       grp031, grp032, grp033, grp034, grp035, grp036, grp037, grp038, grp039, grp040,
-      grp041, grp042, grp043, grp044, grp045, grp046, grp047, grp048, grp049, grp050, 
-      grp051, grp052
+      grp041, grp042, grp043, grp044, grp045, grp046, grp048, grp049, grp050, grp051, 
+      grp052, grp053, grp054
     ];
     
     await Promise.all(groups.map(group => group.save()));
@@ -493,19 +493,14 @@ const seedData = async () => {
         group: grp044._id,
       },
       {
+        fullName: "Rachael Jennelly",
+        earlyResponse: "Pending",
+        group: grp044._id,
+      },
+      {
         fullName: "Emma Thompson",
         earlyResponse: "Pending",
         group: grp045._id,
-      },
-      {
-        fullName: "Stephen Thompson",
-        earlyResponse: "Pending",
-        group: grp046._id,
-      },
-      {
-        fullName: "Robert Thompson",
-        earlyResponse: "Pending",
-        group: grp047._id,
       },
       {
         fullName: "Hunter Weiss",

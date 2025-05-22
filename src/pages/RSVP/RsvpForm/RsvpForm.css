@@ -1,0 +1,77 @@
+.rsvp-form__container{  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-neutral);
+  height: 100vh;
+  width: 100%;
+  padding: 30px;
+}
+
+.rsvp-form__container .rsvp-title {
+  margin-bottom: 20px;
+}
+
+.rsvp-title {
+  font-family: var(--title-font);
+  font-weight: 100;
+  font-size: 35px;
+}
+#disclaimer {
+  width: 60%
+}
+.rsvp-form__container div {
+  margin: 10px 0;
+}
+
+.rsvp-form__container label {
+  margin: 10px;
+}
+
+.rsvp-form__container input[type="radio"] {
+  margin-right: 5px;
+}
+
+.group-members {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  padding: 8px;
+}
+
+.group-members > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.group-members label {
+  margin: 2px;
+}
+
+.response-lbl {
+  font-weight: 400;
+}
+.group-members input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+#member-name {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.rsvp-btn {
+  margin-top: 10px;
+}
+
+/* -------------- MEDIA QUERIES --------------- */
+@media (max-width: 768px) {
+  .rsvp-form__container {
+    padding: 45px 25px;
+  }
+  #disclaimer {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
