@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./RSVP.css";
 
 import EarlyRsvpForm from "./EarlyRsvp/EarlyRsvpForm";
+import RsvpForm from "./RsvpForm/RsvpForm";
 import SearchGuest from "./SearchGuest/SearchGuest";
 import Map from "../../components/Map/Map";
 

@@ -75,7 +75,7 @@ const RsvpForm = ({ group }) => {
                     value="Accepted"
                     checked={response.response === "Accepted"}
                     onChange={(e) =>
-                      handleResponseChange(response.guestId, e.target.value)
+                      handleResponseChange(response.guestId, "response", e.target.value)
                     }
                   />
                   Attending
@@ -87,7 +87,7 @@ const RsvpForm = ({ group }) => {
                     value="No"
                     checked={response.response === "No"}
                     onChange={(e) =>
-                      handleResponseChange(response.guestId, e.target.value)
+                      handleResponseChange(response.guestId, "response", e.target.value)
                     }
                   />
                   Not Attending
@@ -129,6 +129,18 @@ const RsvpForm = ({ group }) => {
                         <option value="Fillet">Robespierre Fillet</option>
                         <option value="Pata Negra">Pata Negra Ingot</option>
                       </select>
+                    </label>
+                  </div>
+                  <div>
+                    <label>
+                      Special Requests:
+                      <input
+                        type="text"
+                        value={response.specialRequests || "Allergies, dietary preferences, etc."}
+                        onChange={(e) =>
+                          handleResponseChange(response.guestId, "specialRequests", e.target.value)
+                        }
+                      />
                     </label>
                   </div>
                 </>

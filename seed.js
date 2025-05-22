@@ -78,7 +78,7 @@ const seedData = async () => {
       grp011, grp012, grp013, grp014, grp015, grp016, grp017, grp018, grp019, grp020,
       grp021, grp022, grp023, grp024, grp025, grp026, grp027, grp028, grp029, grp030,
       grp031, grp032, grp033, grp034, grp035, grp036, grp037, grp038, grp039, grp040,
-      grp041, grp042, grp043, grp044, grp045, grp046, grp048, grp049, grp050, grp051, 
+      grp041, grp042, grp043, grp044, grp045, grp048, grp049, grp050, grp051, 
       grp052, grp053, grp054
     ];
     
@@ -90,436 +90,870 @@ const seedData = async () => {
       {
         fullName: "Dee Granville",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp001._id,
       },
       {
         fullName: "Dan Granville",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp001._id,
       },
       {
         fullName: "Ann Erickson",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp002._id,
       },
       {
         fullName: "Mark Erickson",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp002._id,
       },
       {
         fullName: "Suzanne Rothberg",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp003._id,
       },
       {
         fullName: "Dave Rothberg",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp003._id,
       },
       {
         fullName: "Evie Rothberg",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp003._id,
       },
       {
         fullName: "Cora Rothberg",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp003._id,
       },
       {
         fullName: "Hanna Rothberg",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp003._id,
       },
       {
         fullName: "Sunny Band",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp004._id,
       },
       {
         fullName: "Cody Boland",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp004._id,
       },
       {
         fullName: "Sayrn Horikawa",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp005._id,
       },
       {
         fullName: "Brandi Horikawa",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp005._id,
       },
       {
         fullName: "Emmett Horikawa",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp005._id,
       },
       {
         fullName: "Ami Stuart",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp006._id,
       },
       {
         fullName: "Chris Stuart",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp006._id,
       },
       {
         fullName: "Phil Erickson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp007._id,
       },
       {
         fullName: "Lori Erickson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp007._id,
       },
       {
         fullName: "Todd Shively",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp008._id,
       },
       {
         fullName: "Chris Woods-Shively",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp008._id,
       },
       {
         fullName: "Tristan Metcalf",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp009._id,
       },
       {
         fullName: "Ally Metcalf",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp009._id,
       },
       {
         fullName: "Max Johnson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp010._id,
       },
       {
         fullName: "Taylor Johnson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp010._id,
       },
       {
         fullName: "Steve Rothberg",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp011._id,
       },
       {
         fullName: "Tricia Rothberg",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp011._id,
       },
       {
         fullName: "Jack Rothberg",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp052._id,
       },
       {
         fullName: "Calli Rothberg",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp051._id,
       },
       {
         fullName: "Debbie Howard",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp012._id,
       },
       {
         fullName: "Michael Howard",
-        welcomeDinnerRsvp: "Not Invited",
+        welcomeDinnerRsvp: "Not Invited",    rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp013._id,
       },
       {
         fullName: "Heather Howard",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp013._id,
       },
       {
         fullName: "Mike Yost",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp014._id,
       },
       {
         fullName: "Lexie Yost",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp014._id,
       },
       {
         fullName: "Emma Jones",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp016._id,
       },
       {
         fullName: "Mikaela Gjerstad",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp017._id,
       },
       {
         fullName: "Samuel Gjerstad",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp017._id,
       },
       {
         fullName: "Joanne Howard",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp018._id,
       },
       {
         fullName: "Alex Eterno",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp019._id,
       },
       {
         fullName: "Mase Eterno",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp019._id,
       },
       {
         fullName: "Latane Oordt",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp021._id,
       },
       {
         fullName: "CJ Oordt",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp021._id,
       },
       {
         fullName: "Marion McMuldren",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined },  
+          specialRequests: "",
+        },
         group: grp022._id,
       },
       {
         fullName: "Bob Flippen",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp022._id,
       },
       {
         fullName: "Haley Barsa",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp023._id,
       },
       {
         fullName: "Ray Barsa",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp023._id,
       },
       {
         fullName: "Allie Dietrich",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp024._id,
       },
       {
         fullName: "Jacob Goult",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp024._id,
       },
       {
         fullName: "John Hanna",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp025._id,
       },
       {
         fullName: "Emily Tengblad-Kreft",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp026._id,
       },
       {
         fullName: "Selena Schryvers",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp027._id,
       },
       {
         fullName: "Kristin Colburn",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp028._id,
       },
       {
         fullName: "Dave Colburn",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp028._id,
       },
       {
         fullName: "Larry Gogenola",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp029._id,
       },
       {
         fullName: "Ryan Flannery",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp030._id,
       },
       {
         fullName: "Jodi Flannery",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp030._id,
       },
       {
         fullName: "Esther Centers",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp031._id,
       },
       {
         fullName: "Scott Centers",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp031._id,
       },
       {
         fullName: "Cody McDonald",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp032._id,
       },
       {
         fullName: "Kara McDonald",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp032._id,
       },
       {
         fullName: "David Erickson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp033._id,
       },
       {
         fullName: "Laura Erickson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp033._id,
       },
       {
         fullName: "Phillip Marks",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp034._id,
       },
       {
         fullName: "Avalon Dunbar",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp035._id,
       },
       {
         fullName: "Joyce Juntunen",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp036._id,
       },
       {
         fullName: "Richard Juntunen",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp036._id,
       },
       {
         fullName: "Caroline Thompson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp037._id,
       },
       {
         fullName: "Claire Canfield",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp037._id,
       },
       {
         fullName: "Mackenzie Granville",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp038._id,
       },
       {
         fullName: "Emily Barretta",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp039._id,
       },
       {
         fullName: "James Holohan",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp039._id,
       },
       {
         fullName: "Denise Granville",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp040._id,
       },
       {
         fullName: "Matt Granville",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp040._id,
       },
       {
         fullName: "Samantha Granville",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp041._id,
       },
       {
         fullName: "Suzy Thompson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp042._id,
       },
       {
         fullName: "Jim Thompson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp042._id,
       },
       {
         fullName: "Natalie Granville",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp043._id,
       },
       {
         fullName: "Jacob Granville",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp044._id,
       },
       {
         fullName: "Rachael Jennelly",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp044._id,
       },
       {
         fullName: "Emma Thompson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp045._id,
       },
       {
         fullName: "Hunter Weiss",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp048._id,
       },
       {
         fullName: "Megan Weiss",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp048._id,
       },
       {
         fullName: "Brett Rothberg",
         welcomeDinnerRsvp: "Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp049._id,
       },
       {
         fullName: "Billie Rothberg",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp053._id,
       },
       {
         fullName: "Casey Rothberg",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp054._id,
       },
       {
       fullName: "Chris Burns",
       welcomeDinnerRsvp: "Not Invited",
+      rsvp: {
+        response: "Pending",
+        mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+        specialRequests: "",
+      },
       group: grp054._id,
       },
       {
         fullName: "James Erickson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp050._id,
       },
       {
         fullName: "Charlotte Erickson",
         welcomeDinnerRsvp: "Not Invited",
+        rsvp: {
+          response: "Pending",
+          mealPreference: { firstCourse: undefined, secondCourse: undefined }, 
+          specialRequests: "",
+        },
         group: grp050._id,
       }
     ];
