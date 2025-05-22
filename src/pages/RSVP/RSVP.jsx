@@ -12,7 +12,7 @@ const RSVP = () => {
     <>
     <div className="RSVP__container">
       {groupData ? (
-        <EarlyRsvpForm group={groupData} />
+        <RsvpForm group={groupData} />
       ) : (
         <>
           <div className="name-date__container">

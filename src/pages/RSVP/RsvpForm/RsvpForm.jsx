@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./EarlyRsvpForm.css";
+import "./RsvpForm.css";
 
 // const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 // const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
@@ -12,16 +12,18 @@ const RsvpForm = ({ group }) => {
     group.members.map((member) => ({
       guestId: member._id,
       fullName: member.fullName,
-      earlyResponse: member.earlyResponse || "Pending",
+      response: member.rsvp?.response || "Pending",
+      mealPreference: member.rsvp?.mealPreference || { firstCourse: "", secondCourse: "" },
+      welcomeDinnerRsvp: member.welcomeDinnerRsvp || "Not Invited",
     }))
   );
 
-  const handleResponseChange = (guestId, val) => {
+  const handleResponseChange = (guestId, field, val) => {
     // console.log('Changing response for guestId:', guestId, 'to', val);
     setResponses((prevResponses) => {
       const updatedResponses = prevResponses.map((response) =>
         response.guestId === guestId
-          ? { ...response, earlyResponse: val }
+          ? { ...response, [field]: val }
           : response
       );
       // console.log('Updated responses:', updatedResponses);
@@ -33,10 +35,15 @@ const RsvpForm = ({ group }) => {
     try {
       await Promise.all(
         responses.map((response) => {
-          const url = `/api/guests/${response.guestId}/early-response`;
-          console.log(`Sending PATCH request to URL: ${url}`);
-          axios.patch(`api/guests/${response.guestId}/early-response`, {
-            earlyResponse: response.earlyResponse,
+          const url = `/api/guests/${response.guestId}/rsvp`;
+          // console.log(`Sending PATCH request to URL: ${url}`);
+          axios.patch(url, {
+            rsvp: {
+            response: response.response,
+            mealPreference: response.mealPreference,
+            specialRequests: response.specialRequests,
+            },
+            welcomeDinnerRsvp: response.welcomeDinnerRsvp,
           });
         })
       );
@@ -65,27 +72,83 @@ const RsvpForm = ({ group }) => {
                   <input
                     type="radio"
                     name={`response-${response.guestId}`}
-                    value="Yes"
-                    checked={response.earlyResponse === "Yes"}
+                    value="Accepted"
+                    checked={response.response === "Accepted"}
                     onChange={(e) =>
                       handleResponseChange(response.guestId, e.target.value)
                     }
                   />
-                  Likely to attend
+                  Attending
                 </label>
                 <label style={{display: "block", alignItems: "start"}}>
                   <input
                     type="radio"
                     name={`response-${response.guestId}`}
                     value="No"
-                    checked={response.earlyResponse === "No"}
+                    checked={response.response === "No"}
                     onChange={(e) =>
                       handleResponseChange(response.guestId, e.target.value)
                     }
                   />
-                  Unlikely to attend
+                  Not Attending
                 </label>
               </div>
+              {response.response === "Accepted" && (
+                <>
+                <div>
+                  <label> 
+                    First Course Preference: 
+                    <select
+                      value={response.mealPreference.firstCourse}
+                      onChange={(e) =>
+                        handleResponseChange(response.guestId, "mealPreference", {
+                          ...response.mealPreference,
+                          firstCourse: e.target.value,
+                        })
+                      }
+                      >
+                        <option value="">Select</option>
+                        <option value="Risotto">Saffron Risotto</option>
+                        <option value="Nest">Pasta nest stuffed with mozzarella di buffalo in tomato sauce</option>
+                      </select>
+                  </label>
+                </div>
+                <div>
+                    <label>
+                      Second Course Preference:
+                      <select
+                        value={response.mealPreference.secondCourse}
+                        onChange={(e) =>
+                          handleResponseChange(response.guestId, "mealPreference", {
+                            ...response.mealPreference,
+                            secondCourse: e.target.value,
+                          })
+                        }
+                      >
+                        <option value="">Select</option>
+                        <option value="Fillet">Robespierre Fillet</option>
+                        <option value="Pata Negra">Pata Negra Ingot</option>
+                      </select>
+                    </label>
+                  </div>
+                </>
+              )}
+              {response.welcomeDinnerRsvp !== "Not Invited" && (
+                <div>
+                  <label>
+                    Welcome Dinner:
+                    <select
+                      value={response.welcomeDinnerRsvp}
+                      onChange={(e) =>
+                        handleResponseChange(response.guestId, "welcomeDinnerRsvp", e.target.value)
+                      }
+                    >
+                      <option value="Accepted">Attending</option>
+                      <option value="Declined">Not Attending</option>
+                    </select>
+                  </label>
+                </div>
+              )}
             </div>
           ))}
           <button className="btn rsvp-btn" onClick={handleSubmitResponse}>Submit</button>

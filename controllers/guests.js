@@ -32,6 +32,8 @@ const searchGuest = async (req, res) => {
   }
 }
 
+
+
 const updateEarlyResponse = async (req, res) => {
   try {
     console.log(req.params, 'REQ PARAMS')
@@ -71,6 +73,10 @@ const getAllRSVPs = async (req, res) => {
     res.status(500).json({ message: 'Server error'});
   }
 }
+
+
+
+
 
 // Take RSVP object and calculate total number of guests attending, return RSVP status 
 // const calculateGroupRSVPStatus = (rsvp) => {
