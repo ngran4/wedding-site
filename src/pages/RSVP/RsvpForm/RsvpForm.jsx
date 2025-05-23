@@ -58,7 +58,10 @@ const RsvpForm = ({ group }) => {
   return (
     <div className="rsvp-form__container">
       {isSubmitted ? (
-        <h2>Thank you! Your RSVP has been submitted!</h2>
+        <>
+          <h2>Thank you! Your RSVP has been submitted!</h2>
+          <p>click here to view the Registry</p>
+        </>
       ) : (
         <>
           <h2 className="rsvp-title">{group.groupName}</h2>
@@ -68,7 +71,7 @@ const RsvpForm = ({ group }) => {
             <div className="group-members" key={response.guestId}>
               <label id="member-name">{response.fullName}</label>
               <div className="response-lbl">
-                <label>
+                {/* <label>
                   <input
                     type="radio"
                     name={`response-${response.guestId}`}
@@ -79,8 +82,32 @@ const RsvpForm = ({ group }) => {
                     }
                   />
                   Attending
-                </label>
-                <label style={{display: "block", alignItems: "start"}}>
+                </label> */}
+                <div className="rsvp-btns">
+                  <button
+                  type="button"
+                  className={`rsvp-option ${response.response === "Accepted" ? "selected" : "" }`}
+                  value="Accepted"
+                  onClick={(e) => 
+                    handleResponseChange(response.guestId, "response", e.target.value)
+                  }
+                  >
+                    Attending
+                  </button>
+                </div>
+                <div className="rsvp-btns">
+                  <button
+                  type="button"
+                  className={`rsvp-option ${response.response === "Declined" ? "selected" : "" }`}
+                  value="Declined"
+                  onClick={(e) => 
+                    handleResponseChange(response.guestId, "response", e.target.value)
+                  }
+                  >
+                    Not Attending
+                  </button>
+                </div>
+                {/* <label style={{display: "block", alignItems: "start"}}>
                   <input
                     type="radio"
                     name={`response-${response.guestId}`}
@@ -91,7 +118,7 @@ const RsvpForm = ({ group }) => {
                     }
                   />
                   Not Attending
-                </label>
+                </label> */}
               </div>
               {response.response === "Accepted" && (
                 <>
