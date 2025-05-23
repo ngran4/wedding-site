@@ -40,7 +40,7 @@
 }
 
 .nav__link {
-  color: var(--title-color);
+  color: #c2ce68;
   font-weight: var(--body-font);
   transition: color 0.4s;
 }
