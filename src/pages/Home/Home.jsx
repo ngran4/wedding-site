@@ -19,7 +19,7 @@ const Home = () => {
       <div className="home__container">
         <div className="hero__container">
           <div className="hero-textbox">
-            <p id="hero-intro">Join Us For The Upcoming Wedding Of</p>
+            <p id="hero-intro">Ci Sposiamo!</p>
             <div id="hero-names">
               NICOLE <br />
               <div className="inline-container">
