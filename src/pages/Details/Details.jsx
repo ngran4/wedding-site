@@ -65,11 +65,13 @@ const Details = () => {
           <PiDotOutlineFill className="dot" />
           <div className="event">
             <div
-              className="event-time"
+              className="event-time details-aperitivo"
             >
-              5
-            </div>
-            <span style={{ color: primaryRed,  paddingRight: '8px' }}> pm</span>{" "}
+              4<span id="details-aperitivo-time">30</span></div>
+                <span id="details-aperitivo-pm">
+                  {" "}
+                  pm
+                </span>{" "}
             Aperitivo
             <p>Join us for a cocktail hour in the garden</p>
           </div>

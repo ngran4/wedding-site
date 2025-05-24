@@ -178,6 +178,20 @@
   display: inline;
 }
 
+
+#details-aperitivo-time {
+  font-size: 18px;
+  display: inline-block;  
+  position: relative;
+  top: -1.6em;
+}
+
+#details-aperitivo-pm {
+  color: var(--primary-green);
+  position: relative;
+  left: -1em;
+}
+
 .events-block .dot {
   font-size: 25px;
   margin-top: 1.2rem;
