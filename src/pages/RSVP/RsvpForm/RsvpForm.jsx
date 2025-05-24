@@ -73,6 +73,7 @@ const RsvpForm = ({ group }) => {
           {responses.map((response) => (
             <div className="group-members" key={response.guestId}>
               <label id="member-name">{response.fullName}</label>
+              <label>Ceremony & Reception <br/> Sunday, September 7th @ 4:00pm</label>
               <div className="rsvp-btns">
                 <button
                   type="button"
@@ -186,8 +187,9 @@ const RsvpForm = ({ group }) => {
                     <label className="special-request-label">
                       Special Requests{" "}
                       <span id="parentheses">
-                        (allergies, dietary restrictions, etc.):
+                        (allergies, dietary restrictions, etc.)
                       </span>
+                    </label>
                       <textarea
                         value={response.specialRequests || ""}
                         onChange={(e) =>
@@ -201,13 +203,12 @@ const RsvpForm = ({ group }) => {
                         cols="50" // Adjust the number of columns for width
                         style={{ resize: "none" }} // Optional: Prevent resizing
                       />
-                    </label>
                   </div>
                 </>
               )}
               {response.welcomeDinnerRsvp !== "Not Invited" && (
                 <div>
-                  <label>Welcome Dinner:</label>
+                  <label>Welcome Dinner <br/> Saturday, September 6th @ 4:30pm</label>
                   <div className="rsvp-btns">
                     <button
                       type="button"

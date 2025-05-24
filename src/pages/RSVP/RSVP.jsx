@@ -19,9 +19,9 @@ const RSVP = () => {
           <div className="name-date__container">
             <h1>Nicole & Ian</h1>
             <p>Sunday, Sep 7 | Lucca, Italy</p>
-            <p>
+            {/* <p>
               Please submit a preliminary RSVP to help us get an idea of numbers
-            </p>
+            </p> */}
             <SearchGuest setGroupData={setGroupData} />
             {/* {groupData ? (
         <EarlyRsvpForm group={groupData} />

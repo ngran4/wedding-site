@@ -59,12 +59,27 @@
   flex-wrap: wrap;
 }
 
+.special-request {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .special-request textarea {
   width: 100%;
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
   display: block;
+}
+
+.special-request-label {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
 }
 
 /* BUTTONS */
@@ -112,12 +127,6 @@
   background-color: var(--primary-green);
   color: rgb(255, 255, 255);
   border-color: var(--primary-accent-dark);
-}
-
-.special-request-label {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
 }
 
 .welcome-option:hover {
