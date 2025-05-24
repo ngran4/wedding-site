@@ -70,61 +70,35 @@ const RsvpForm = ({ group }) => {
           {responses.map((response) => (
             <div className="group-members" key={response.guestId}>
               <label id="member-name">{response.fullName}</label>
-              <div className="response-lbl">
-                {/* <label>
-                  <input
-                    type="radio"
-                    name={`response-${response.guestId}`}
-                    value="Accepted"
-                    checked={response.response === "Accepted"}
-                    onChange={(e) =>
-                      handleResponseChange(response.guestId, "response", e.target.value)
-                    }
-                  />
-                  Attending
-                </label> */}
                 <div className="rsvp-btns">
                   <button
                   type="button"
-                  className={`rsvp-option ${response.response === "Accepted" ? "selected" : "" }`}
+                  className={`btn rsvp-option ${response.response === "Accepted" ? "selected" : "" }`}
                   value="Accepted"
                   onClick={(e) => 
                     handleResponseChange(response.guestId, "response", e.target.value)
                   }
                   >
-                    Attending
+                    ACCEPT
                   </button>
-                </div>
-                <div className="rsvp-btns">
                   <button
                   type="button"
-                  className={`rsvp-option ${response.response === "Declined" ? "selected" : "" }`}
+                  className={`btn rsvp-option ${response.response === "Declined" ? "selected" : "" }`}
                   value="Declined"
                   onClick={(e) => 
                     handleResponseChange(response.guestId, "response", e.target.value)
                   }
                   >
-                    Not Attending
+                    DECLINE
                   </button>
                 </div>
-                {/* <label style={{display: "block", alignItems: "start"}}>
-                  <input
-                    type="radio"
-                    name={`response-${response.guestId}`}
-                    value="No"
-                    checked={response.response === "No"}
-                    onChange={(e) =>
-                      handleResponseChange(response.guestId, "response", e.target.value)
-                    }
-                  />
-                  Not Attending
-                </label> */}
-              </div>
+  
               {response.response === "Accepted" && (
                 <>
+                <div className="meal-preferences">
     <div className="fc-response">
       <label>First Course Preference:</label>
-      <div className="button-group">
+      <div className="meal-btns">
         <button
           type="button"
           className={`meal-option ${response.mealPreference.firstCourse === "Risotto" ? "selected" : ""}`}
@@ -147,13 +121,13 @@ const RsvpForm = ({ group }) => {
             })
           }
         >
-          Pasta Nest
+          Pasta Swallow's Nest
         </button>
       </div>
     </div>
-    <div>
+    <div className="sc-response">
       <label>Second Course Preference:</label>
-      <div className="button-group">
+      <div className="meal-btns">
         <button
           type="button"
           className={`meal-option ${response.mealPreference.secondCourse === "Fillet" ? "selected" : ""}`}
@@ -180,6 +154,7 @@ const RsvpForm = ({ group }) => {
         </button>
       </div>
     </div>
+    </div>
     <div>
       <label className="special-request-label">
         Special Requests:
@@ -194,27 +169,39 @@ const RsvpForm = ({ group }) => {
         />
       </label>
     </div>
+  
                 </>
               )}
               {response.welcomeDinnerRsvp !== "Not Invited" && (
                 <div>
-                  <label>
-                    Welcome Dinner:
-                    <select
-                      value={response.welcomeDinnerRsvp}
-                      onChange={(e) =>
-                        handleResponseChange(response.guestId, "welcomeDinnerRsvp", e.target.value)
-                      }
+                  <label>Welcome Dinner:</label>
+                  <div className="rsvp-btns">
+                    <button
+                    type="button"
+                    className={`btn rsvp-option ${response.response === "Accepted" ? "selected" : "" }`}
+                    value="Accepted"
+                    onClick={(e) => 
+                      handleResponseChange(response.guestId, "response", e.target.value)
+                    }
                     >
-                      <option value="Accepted">Attending</option>
-                      <option value="Declined">Not Attending</option>
-                    </select>
-                  </label>
+                    ACCEPT
+                    </button>
+                    <button
+                    type="button"
+                    className={`btn rsvp-option ${response.response === "Declined" ? "selected" : "" }`}
+                    value="Declined"
+                    onClick={(e) => 
+                      handleResponseChange(response.guestId, "response", e.target.value)
+                    }
+                    >
+                    DECLINE
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
           ))}
-          <button className="btn rsvp-btn" onClick={handleSubmitResponse}>Submit</button>
+          <button className="btn rsvp-btns" onClick={handleSubmitResponse}>Submit</button>
         </>
       )}
     </div>

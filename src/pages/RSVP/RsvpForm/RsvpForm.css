@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--primary-neutral);
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   padding: 30px;
 }
@@ -39,21 +39,8 @@
   padding: 8px;
 }
 
-.group-members > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .group-members label {
   margin: 2px;
-}
-
-.response-lbl {
-  font-weight: 400;
-}
-.group-members input[type="radio"] {
-  margin-right: 0.5rem;
 }
 
 #member-name {
@@ -61,36 +48,49 @@
   margin-bottom: 5px;
 }
 
+
+
 /* course buttons  */
-.rsvp-btn {
+.rsvp-btns {
+  color: white;
+  display: flex; 
+  flex-direction: row !important;
+  gap: 10px !important;
   margin-top: 10px;
-}
-
-.button-group {
-  display: flex;
-  gap: 10px;
-  margin-top: 5px;
-}
-
-.meal-option {
-  padding: 10px 15px;
-  border: 2px solid var(--primary-neutral-dark);
-  background-color: var(--primary-neutral-light);
-  color: var(--primary-text);
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 14px;
   transition: all 0.3s ease;
 }
 
-.meal-option:hover {
-  background-color: var(--primary-neutral-dark);
+.meal-preferences {
+  display: flex; 
+  flex-direction: row !important;
+  gap: 80px; 
+  margin-top: 20px; 
+}
+
+.meal-btns {
   color: white;
+  display: flex; 
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.meal-option {
+  color: white;
+  cursor: pointer;
+  padding: .9rem 2.2rem;
+  background-color: var(--primary-red);
+  border: none;
+}
+
+.meal-option:hover {
+  background-color: #ccd584;
 }
 
 .meal-option.selected {
-  background-color: var(--primary-accent);
-  color: white;
+  background-color: #ccd584 ;
+  color: rgb(255, 255, 255);
   border-color: var(--primary-accent-dark);
 }
 

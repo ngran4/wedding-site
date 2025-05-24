@@ -53,6 +53,7 @@
   padding: .9rem 2.2rem;
   background-color: var(--primary-red);
   border: none;
+  color: white;
   /* transition: var(--transition); */
 }
 
