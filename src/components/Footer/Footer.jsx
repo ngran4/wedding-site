@@ -9,7 +9,7 @@ const Footer = () => {
         <div id="footer-text">QUESTIONS? TEXT US!</div>
       </div>
       <div className="lower-footer">
-        <PiCopyrightLight style={{ marginRight: "5px" }}/> 2030 by Nicole Granille
+        <PiCopyrightLight style={{ marginRight: "5px" }}/> 2030 by Nicole Granville
       </div>
       </div>
   )

@@ -93,11 +93,11 @@
 }
 
 .rsvp-option:hover {
-  background-color: #ccd584;
+  background-color: var(--button-hover);
 }
 
 .rsvp-option.selected {
-  background-color: var(--primary-green);
+  background-color: var(--secondary-green);
   color: rgb(255, 255, 255);
   border-color: var(--primary-accent-dark);
 }
@@ -115,26 +115,26 @@
   color: white;
   cursor: pointer;
   padding: .9rem 2.2rem;
-  background-color: var(--primary-red);
+  background-color: var(--primary-green);
   border: none;
 }
 
 .meal-option:hover {
-  background-color: #ccd584;
+  background-color: var(--button-hover);
 }
 
 .meal-option.selected {
-  background-color: var(--primary-green);
+  background-color: var(--secondary-green);
   color: rgb(255, 255, 255);
   border-color: var(--primary-accent-dark);
 }
 
 .welcome-option:hover {
-  background-color: #ccd584;
+  background-color: var(--button-hover);
 }
 
 .welcome-option.selected {
-  background-color: var(--primary-green);
+  background-color: var(--secondary-green);
   color: rgb(255, 255, 255);
   border-color: var(--primary-accent-dark);
 }

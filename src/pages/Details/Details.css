@@ -94,11 +94,11 @@
 .accomodation-block {
   grid-area: accomodation-block;
   background-color: var(--primary-cream);
-  color: var(--primary-green);
+  color: var(--secondary-green);
 }
 
 .accomodation-block .vl {
-  background-color: var(--primary-green);
+  background-color: var(--secondary-green);
   width: 1.7px;
 }
 
@@ -127,7 +127,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--primary-red);
+  background-color: var(--primary-green);
   color:var(--primary-cream)
 }
 
@@ -171,7 +171,7 @@
 }
 
 .events-block .event-time {
-  color: var(--primary-red);
+  color: var(--primary-green);
   font-family: var(--title-font);
   font-size: 3.5rem;
   font-weight: 500;

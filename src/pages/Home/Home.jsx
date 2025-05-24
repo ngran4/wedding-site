@@ -10,7 +10,7 @@ const primaryOrange = getComputedStyle(
   document.documentElement
 ).getPropertyValue("--primary-orange");
 const primaryRed = getComputedStyle(document.documentElement).getPropertyValue(
-  "--primary-red"
+  "--primary-green"
 );
 
 const Home = () => {
@@ -78,15 +78,15 @@ const Home = () => {
             <div className="DetailsBlock__events">
               <div>
                 <div className="DetailsBlock__event-time">4</div>
-                <span style={{ color: primaryRed, paddingRight: "8px" }}>
+                <span style={{ color: primaryRed, paddingRight: "22px" }}>
                   {" "}
                   pm
                 </span>{" "}
                 Ceremony
               </div>
               <div>
-                <div className="DetailsBlock__event-time">5</div>
-                <span style={{ color: primaryRed, paddingRight: "8px" }}>
+                <div className="DetailsBlock__event-time">4<span id="aperitivo-time">30</span></div>
+                <span id="aperitivo-pm">
                   {" "}
                   pm
                 </span>{" "}
@@ -94,7 +94,7 @@ const Home = () => {
               </div>
               <div>
                 <div className="DetailsBlock__event-time">6</div>
-                <span style={{ color: primaryRed, paddingRight: "8px" }}>
+                <span style={{ color: primaryRed, paddingRight: "23px" }}>
                   {" "}
                   pm
                 </span>{" "}
@@ -116,7 +116,7 @@ const Home = () => {
 
         <div className="RsvpBlock__container">
           <div className="RsvpBlock__link">
-            <p id="RsvpBlock__text">Please fill out a non-committal RSVP</p>
+            <p id="RsvpBlock__text">Please fill out our RSVP form</p>
             <div id="rsvp-btn">
               <a href="/rsvp" className="btn" style={{ color: "white" }}>
                 RSVP NOW

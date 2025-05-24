@@ -19,7 +19,7 @@
 }
 
 .search-btn:hover {
-  background-color: #ccd584;
+  background-color: var(--button-hover);
 }
 
 @media (max-width: 768px) {

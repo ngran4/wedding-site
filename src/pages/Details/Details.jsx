@@ -2,7 +2,7 @@ import React from "react";
 import "./Details.css";
 import { PiDotOutlineFill } from "react-icons/pi";
 
-const primaryRed = getComputedStyle(document.documentElement).getPropertyValue('--primary-red');
+const primaryRed = getComputedStyle(document.documentElement).getPropertyValue('--primary-green');
 
 const Details = () => {
   return (
