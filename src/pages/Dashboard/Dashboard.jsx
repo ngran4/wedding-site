@@ -27,8 +27,8 @@ const Dashboard = () => {
         <tr>
           <th>Name</th>
           <th>Group</th>
-          <th>Welcome Dinner Response</th>
-          <th>RSVP Status</th>
+          <th>Welcome Dinner</th>
+          <th>RSVP</th>
         </tr>
       </thead>
       <tbody>

@@ -3,8 +3,9 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--primary-neutral);
-  height: 150vh;
+  height: fit-content;
   width: 100%;
+  box-sizing: border-box;
   padding: 30px;
 }
 
@@ -20,17 +21,17 @@
 #disclaimer {
   width: 60%
 }
-.rsvp-form__container div {
+/* .rsvp-form__container div {
   margin: 10px 0;
-}
+} */
 
-.rsvp-form__container label {
+/* .rsvp-form__container label {
   margin: 10px;
-}
+} */
 
-.rsvp-form__container input[type="radio"] {
+/* .rsvp-form__container input[type="radio"] {
   margin-right: 5px;
-}
+} */
 
 .group-members {
   display: flex;
@@ -49,7 +50,24 @@
   margin-bottom: 5px;
 }
 
-/* course buttons  */
+.meal-preferences {
+  display: flex; 
+  flex-direction: row !important;
+  gap: 80px; 
+  margin-top: 20px; 
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.special-request textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* BUTTONS */
 .rsvp-btns {
   color: white;
   display: flex; 
@@ -67,13 +85,6 @@
   background-color: var(--primary-green);
   color: rgb(255, 255, 255);
   border-color: var(--primary-accent-dark);
-}
-
-.meal-preferences {
-  display: flex; 
-  flex-direction: row !important;
-  gap: 80px; 
-  margin-top: 20px; 
 }
 
 .meal-btns {
@@ -119,6 +130,10 @@
   border-color: var(--primary-accent-dark);
 }
 
+#parentheses{
+  font-style: italic;
+}
+
 /* -------------- MEDIA QUERIES --------------- */
 @media (max-width: 768px) {
   .rsvp-form__container {
@@ -127,5 +142,9 @@
   #disclaimer {
     width: 100%;
     margin-bottom: 1rem;
+  }
+  .meal-preferences {
+    flex-direction: column !important; 
+    gap: 15px; 
   }
 }
