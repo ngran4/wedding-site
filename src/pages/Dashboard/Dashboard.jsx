@@ -27,7 +27,7 @@ const Dashboard = () => {
         <tr>
           <th>Name</th>
           <th>Group</th>
-          <th>Early Response</th>
+          <th>Welcome Dinner Response</th>
           <th>RSVP Status</th>
         </tr>
       </thead>
@@ -36,7 +36,7 @@ const Dashboard = () => {
           <tr key={guest._id}>
             <td>{guest.fullName}</td>
             <td>{guest.group?.groupName || 'N/A'}</td>
-            <td>{guest.earlyResponse}</td>
+            <td>{guest.welcomeDinnerResponse}</td>
             <td>{guest.rsvp?.response || 'Pending'}</td>
           </tr>
         ))}

@@ -35,7 +35,7 @@ const searchGuest = async (req, res) => {
 const updateRSVP = async (req, res) => {
   try {
     const { guestId } = req.params;
-    const { rsvp } = req.body;
+    const { rsvp, welcomeDinnerRsvp } = req.body;
     
     // update rsvp and welcome dinner rsvp
     const guest = await Guest.findByIdAndUpdate(

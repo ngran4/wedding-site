@@ -18,6 +18,10 @@
   display: block;
 }
 
+.search-btn:hover {
+  background-color: #ccd584;
+}
+
 @media (max-width: 768px) {
   .search-guest__container input {
     width: 55%;
