@@ -178,20 +178,20 @@ const RsvpForm = ({ group }) => {
                   <div className="rsvp-btns">
                     <button
                     type="button"
-                    className={`btn rsvp-option ${response.response === "Accepted" ? "selected" : "" }`}
+                    className={`btn welcome-option ${response.welcomeDinnerRsvp === "Accepted" ? "selected" : "" }`}
                     value="Accepted"
                     onClick={(e) => 
-                      handleResponseChange(response.guestId, "response", e.target.value)
+                      handleResponseChange(response.guestId, "welcomeDinnerRsvp", e.target.value)
                     }
                     >
                     ACCEPT
                     </button>
                     <button
                     type="button"
-                    className={`btn rsvp-option ${response.response === "Declined" ? "selected" : "" }`}
+                    className={`btn welcome-option ${response.welcomeDinnerRsvp === "Declined" ? "selected" : "" }`}
                     value="Declined"
                     onClick={(e) => 
-                      handleResponseChange(response.guestId, "response", e.target.value)
+                      handleResponseChange(response.guestId, "welcomeDinnerRsvp", e.target.value)
                     }
                     >
                     DECLINE

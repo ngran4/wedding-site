@@ -35,6 +35,7 @@
 .group-members {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 1rem;
   padding: 8px;
 }
@@ -48,8 +49,6 @@
   margin-bottom: 5px;
 }
 
-
-
 /* course buttons  */
 .rsvp-btns {
   color: white;
@@ -58,6 +57,16 @@
   gap: 10px !important;
   margin-top: 10px;
   transition: all 0.3s ease;
+}
+
+.rsvp-option:hover {
+  background-color: #ccd584;
+}
+
+.rsvp-option.selected {
+  background-color: var(--primary-green);
+  color: rgb(255, 255, 255);
+  border-color: var(--primary-accent-dark);
 }
 
 .meal-preferences {
@@ -89,13 +98,25 @@
 }
 
 .meal-option.selected {
-  background-color: #ccd584 ;
+  background-color: var(--primary-green);
   color: rgb(255, 255, 255);
   border-color: var(--primary-accent-dark);
 }
 
 .special-request-label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.welcome-option:hover {
+  background-color: #ccd584;
+}
+
+.welcome-option.selected {
+  background-color: var(--primary-green);
+  color: rgb(255, 255, 255);
+  border-color: var(--primary-accent-dark);
 }
 
 /* -------------- MEDIA QUERIES --------------- */
