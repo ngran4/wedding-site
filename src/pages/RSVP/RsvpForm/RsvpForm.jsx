@@ -60,7 +60,9 @@ const RsvpForm = ({ group }) => {
       {isSubmitted ? (
         <>
           <h2>Thank you! Your RSVP has been submitted!</h2>
-          <p>click here to view the Registry</p>
+          <p>P.S. If you'd like to help us toast to our next chapter, we've set up a <a href="https://registry.theknot.com/--september-2025-wa/68898013">Honeymoon fund</a> for our postnuptial adventure. 
+            Any gift means so much and will help us make memories to last a lifetime :)
+        </p>
         </>
       ) : (
         <>

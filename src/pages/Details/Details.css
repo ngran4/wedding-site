@@ -191,6 +191,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+#honeyfund{
+  font-family: var(--title-font);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+a:link {
+  color: var(--secondary-green);
+  background-color: transparent;
+  text-decoration: none;
 }
 
 

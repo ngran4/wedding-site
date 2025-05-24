@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital@1&display=swap');
 
+@font-face {
+  font-family: "Burgues Script";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/BurguesScript-Regular.ttf") format("truetype");
+}
 
 * {
   box-sizing: border-box;

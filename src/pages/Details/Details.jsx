@@ -21,9 +21,7 @@ const Details = () => {
           <h2>TRANSPORTATION</h2>
           <div className="vl"></div>
           <p>
-            Parking is limited at the venue, so we will be providing a bus to
-            pick guests up in Lucca city center and a shuttle to return guests
-            will be running from 10pm-12pm.
+            The transfer service for guests outside the venue will pickup and drop-off at Porta Santa Maria, you can save <a href="https://maps.app.goo.gl/ovijc6UMF3u16e7k6?g_st=iw" target="_blank">this google maps link</a> for reference
           </p>
         </div>
         <div className="accomodation-block">
@@ -87,7 +85,11 @@ const Details = () => {
             <p>Dinner, daincing and speeches</p>
           </div>
         </div>
-        <div className="bottom-block">registry coming soon :)</div>
+        <div className="bottom-block">
+        If you'd like to help us toast to our next chapter, we've set up a <a href="https://registry.theknot.com/--september-2025-wa/68898013" id="honeyfund">HONEYMOON FUND</a> for our postnuptial adventure. 
+            Any gift means so much and will help us make memories to last a lifetime :)
+          
+        </div>
       </div>
     </>
   );
