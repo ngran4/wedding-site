@@ -1,8 +1,11 @@
 import React from "react";
 import "./Details.css";
 import { PiDotOutlineFill } from "react-icons/pi";
+import LuccaInfoSheet from "../../assets/LuccaInfoSheet.pdf"
 
-const primaryRed = getComputedStyle(document.documentElement).getPropertyValue('--primary-green');
+const primaryGreen = getComputedStyle(document.documentElement).getPropertyValue('--primary-green')
+const secondaryGreen = getComputedStyle(document.documentElement).getPropertyValue('--secondary-green');
+const primaryCream = getComputedStyle(document.documentElement).getPropertyValue('--primary-cream');
 
 const Details = () => {
   return (
@@ -21,23 +24,21 @@ const Details = () => {
           <h2>TRANSPORTATION</h2>
           <div className="vl"></div>
           <p>
-            The transfer service for guests outside the venue will pickup and drop-off at Porta Santa Maria, you can save <a href="https://maps.app.goo.gl/ovijc6UMF3u16e7k6?g_st=iw" target="_blank">this google maps link</a> for reference
+            The transfer service for guests outside the venue will pickup and drop-off at Porta Santa Maria, you can save <a href="https://maps.app.goo.gl/ovijc6UMF3u16e7k6?g_st=iw" target="_blank" rel="noopener noreferrer" style={{ color:primaryCream, fontWeight: 500, textDecoration: "underline"}}>this map link</a> for reference
           </p>
         </div>
         <div className="accomodation-block">
-          <h2>ACCOMODATIONS</h2>
+          <h2>ACCOMMODATIONS</h2>
           <div className="vl"></div>
           <p>
-            There are many hotels in the area. Please return at a later date for
-            a more detailed list.
+            Check out our <a href={LuccaInfoSheet} target="_blank" rel="noopener noreferrer" style={{ color: secondaryGreen, fontWeight: 500, textDecoration: "underline"}}>guide</a> for travel tips, places to stay, and things to do in the area. You can also save this <a href="https://www.google.com/maps/d/u/0/viewer?mid=1EDjldnUgkW85bOORx4NddD6F9zxDN0jJ&g_ep=CAISEjI1LjIwLjAuNzU3ODEwNjA5MBgAIN1iKmIsOTQyNjczMjM5NDI3NTMwNCw5NDIyNDgyNSw5NDIyNzI0Nyw5NDIyNzI0OCw5NDIzMTE4OCw0NzA3MTcwNCw0NzA2OTUwOCw5NDIxODY0MSw5NDIwMzAxOSw0NzA4NDMwNEICVVM%3D&skid=6f0ba72d-e6c7-4f7e-9773-19d32ef7e1b1&g_st=ia&ll=43.86076042925501%2C10.435577750000018&z=11" target="_blank" rel="noopener noreferrer" style={{ color: secondaryGreen, fontWeight: 500, textDecoration: "underline"}}>google map</a> for local eats, drinks, and shopping.
           </p>
         </div>
         <div className="attire-block">
           <h2>ATTIRE</h2>
           <div className="vl"></div>
           <p>
-            Formal or cocktail attire is requested. Further details will be
-            provided after invitations are sent.
+            Formal attire requested (longer cocktail dresses are fine—just no minis, please!). 
           </p>
         </div>
         </div>
@@ -58,7 +59,7 @@ const Details = () => {
             >
               4
             </div>
-            <span style={{ color: primaryRed,  paddingRight: '7px' }}> pm</span>{" "}
+            <span style={{ color: primaryGreen,  paddingRight: '7px' }}> pm</span>{" "}
             Ceremony
             <p>The ceremony will be located on the Duna</p>
           </div>
@@ -82,7 +83,7 @@ const Details = () => {
             >
               6
             </div>
-            <span style={{ color: primaryRed, paddingRight: '8px' }}> pm</span>{" "}
+            <span style={{ color: primaryGreen, paddingRight: '8px' }}> pm</span>{" "}
             Reception
             <p>Dinner, daincing and speeches</p>
           </div>
