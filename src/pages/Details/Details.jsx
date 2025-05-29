@@ -89,7 +89,7 @@ const Details = () => {
           </div>
         </div>
         <div className="bottom-block">
-        If you'd like to help us toast to our next chapter, we've set up a <a href="https://registry.theknot.com/--september-2025-wa/68898013" id="honeyfund">HONEYMOON FUND</a> for our postnuptial adventure. 
+        If you'd like to help us toast to our next chapter, we've set up a <a href="https://registry.theknot.com/--september-2025-wa/68898013" id="honeyfund" style={{ color: primaryGreen }}>HONEYMOON FUND</a> for our postnuptial adventure. 
             Any gift means so much and will help us make memories to last a lifetime :)
           
         </div>
