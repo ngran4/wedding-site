@@ -164,7 +164,7 @@ const RsvpForm = ({ group }) => {
                             )
                           }
                         >
-                          Robespierre Fillet
+                          Beef
                         </button>
                         <button
                           type="button"
@@ -180,7 +180,7 @@ const RsvpForm = ({ group }) => {
                             )
                           }
                         >
-                          Pata Negra Ingot
+                          Pork
                         </button>
                       </div>
                     </div>
