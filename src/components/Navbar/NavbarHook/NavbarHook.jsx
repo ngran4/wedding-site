@@ -15,7 +15,7 @@ const NavbarHook = () => {
     if (isMobile) {
       setMobileMenuOpen(false);
       // console.log('close mobile menu, is mobile')
-    } 
+    }
   };
 
   const renderNavLinks = () => {
@@ -44,9 +44,18 @@ const NavbarHook = () => {
         </li>
         <li>
           <NavLink
-          to="/RSVP"
-          className={linkClassName}
-          onClick={closeMobileMenu}
+            to="/registry"
+            className={linkClassName}
+            onClick={closeMobileMenu}
+          >
+            REGISTRY
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/RSVP"
+            className={linkClassName}
+            onClick={closeMobileMenu}
           >
             RSVP
           </NavLink>

@@ -199,7 +199,7 @@
 }
 
 
-.bottom-block { 
+.registry-block { 
   grid-area: bottom-block;
   display: flex;
   flex-direction: column;
@@ -208,11 +208,11 @@
   text-align: center;
 }
 
-#honeyfund{
+/* #honeyfund{
   font-family: var(--title-font);
   font-size: 30px;
   font-weight: 500;
-}
+} */
 
 /* a:link {
   color: var(--secondary-green);
@@ -272,7 +272,7 @@
     padding: 4rem 18px;
   }
 
-  .bottom-block {
+  .registry-block {
     padding: 4rem 0;
   }
 }
