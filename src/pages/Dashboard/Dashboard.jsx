@@ -55,6 +55,7 @@ const Dashboard = () => {
                 <th>Welcome Dinner</th>
                 <th>Wedding RSVP</th>
                 <th>Meal Preference</th>
+                <th>Special Requests</th>
               </tr>
             </thead>
             <tbody>
@@ -68,6 +69,7 @@ const Dashboard = () => {
                       ? `${guest.rsvp.mealPreference.firstCourse || ''} / ${guest.rsvp.mealPreference.secondCourse || ''}`
                       : 'N/A'}
                   </td>
+                  <td>{guest.rsvp?.specialRequests || 'N/A'}</td>
                 </tr>
               ))}
             </tbody>
